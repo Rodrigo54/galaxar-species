@@ -1,5 +1,5 @@
 on_game_start = {
-	events = {
+  events = {
     gsm_game_start.1
   }
 }
