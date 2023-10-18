@@ -11,9 +11,11 @@ gsm_human = {
   }
   portraits = {
     "gsm_default"
+    "gsm_elves"
   }
   non_randomized_portraits = {
     "gsm_default"
+    "gsm_elves"
   }
   graphical_culture = humanoid_01
   move_pop_sound_effect = "moving_pop_confirmation"
