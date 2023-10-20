@@ -4,4 +4,4 @@ supported_version="3.9.*"
 tags={
     "Species"
 }
-picture="thumbnail.jpg"
+picture="thumbnail.png"
