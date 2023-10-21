@@ -1,4 +1,4 @@
-gsm_human = {
+gsm_galaxar = {
   archetype = BIOLOGICAL
   randomized = yes
   possible = {
@@ -13,11 +13,13 @@ gsm_human = {
     "gsm_default"
     "gsm_elves"
     "gsm_marmeid"
+    "gsm_astral"
   }
   non_randomized_portraits = {
     "gsm_default"
     "gsm_elves"
     "gsm_marmeid"
+    "gsm_astral"
   }
   graphical_culture = humanoid_01
   move_pop_sound_effect = "moving_pop_confirmation"

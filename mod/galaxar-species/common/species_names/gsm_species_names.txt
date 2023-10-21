@@ -1,4 +1,4 @@
-gsm_human = {
+gsm_galaxar = {
   Aelodian = {
     name = Aelodian
     plural = Aelodians
