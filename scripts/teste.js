@@ -34,7 +34,7 @@ async function listarArquivosRecursivamente(pastaInicial, pastaDestino) {
     const caminhoRelativo = caminho.replace(pastaInicial, '');
     const caminhoDestino = join(pastaDestino, caminhoRelativo).replace('.png', '.dds');
 
-    return `${caminho} --format bc3 --quality normal --no-mips --zcmp 5 --output ${caminhoDestino}`;
+    return `"${caminho}" --format bc3 --quality normal --no-mips --zcmp 5 --output "${caminhoDestino}"`;
 
   });
 }
@@ -46,8 +46,8 @@ const criarArquivo = async (conteudo) => {
 }
 
 // Especifica o caminho da pasta e o arquivo de saída
-const pastaInicial = join(__dirname, '../assets/marmeid');
-const pastaDestino = join(__dirname, '../testmod/marmeid');
+const pastaInicial = join(__dirname, '../assets/necron');
+const pastaDestino = join(__dirname, '../testmod/necron');
 
 // Chama a função para listar os arquivos e escrever em um arquivo TXT
 
