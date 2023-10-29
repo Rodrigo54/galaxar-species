@@ -46,8 +46,8 @@ const criarArquivo = async (conteudo) => {
 }
 
 // Especifica o caminho da pasta e o arquivo de saída
-const pastaInicial = join(__dirname, '../assets/necron');
-const pastaDestino = join(__dirname, '../testmod/necron');
+const pastaInicial = join(__dirname, '../assets/elves');
+const pastaDestino = join(__dirname, '../testmod/elves');
 
 // Chama a função para listar os arquivos e escrever em um arquivo TXT
 

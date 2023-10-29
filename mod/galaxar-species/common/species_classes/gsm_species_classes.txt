@@ -15,13 +15,8 @@ gsm_galaxar = {
     "gsm_marmeid"
     "gsm_astral"
     "gsm_necron"
-  }
-  non_randomized_portraits = {
-    "gsm_default"
-    "gsm_elves"
-    "gsm_marmeid"
-    "gsm_astral"
-    "gsm_necron"
+    "gsm_gamba"
+    "gsm_octopus"
   }
   graphical_culture = humanoid_01
   move_pop_sound_effect = "moving_pop_confirmation"
