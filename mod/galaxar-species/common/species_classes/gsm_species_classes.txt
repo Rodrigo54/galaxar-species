@@ -17,6 +17,8 @@ gsm_galaxar = {
     "gsm_necron"
     "gsm_gamba"
     "gsm_octopus"
+    "gsm_hastur"
+    "gsm_green_order"
   }
   graphical_culture = humanoid_01
   move_pop_sound_effect = "moving_pop_confirmation"
