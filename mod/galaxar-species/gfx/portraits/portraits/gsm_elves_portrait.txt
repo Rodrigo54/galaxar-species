@@ -1,0 +1,232 @@
+portraits = {
+	gsm_elves_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_male_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_elves/male/scientists/001.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/002.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/003.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/004.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/005.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/006.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/007.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/008.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/009.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/010.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/011.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/012.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/013.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/014.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/015.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/016.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/017.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/018.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/019.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/020.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/021.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/022.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/023.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/024.dds"
+			"gfx/models/portraits/gsm_elves/male/scientists/025.dds"
+		}
+	}
+	gsm_elves_ruler_male_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_male_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_elves/male/rulers/001.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/002.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/003.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/004.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/005.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/006.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/007.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/008.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/009.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/010.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/011.dds"
+		}
+	}
+	gsm_elves_military_male_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_male_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_elves/male/military/001.dds"
+			"gfx/models/portraits/gsm_elves/male/military/002.dds"
+			"gfx/models/portraits/gsm_elves/male/military/003.dds"
+			"gfx/models/portraits/gsm_elves/male/military/004.dds"
+			"gfx/models/portraits/gsm_elves/male/military/005.dds"
+			"gfx/models/portraits/gsm_elves/male/military/006.dds"
+			"gfx/models/portraits/gsm_elves/male/military/007.dds"
+			"gfx/models/portraits/gsm_elves/male/military/008.dds"
+			"gfx/models/portraits/gsm_elves/male/military/009.dds"
+			"gfx/models/portraits/gsm_elves/male/military/010.dds"
+			"gfx/models/portraits/gsm_elves/male/military/011.dds"
+			"gfx/models/portraits/gsm_elves/male/military/012.dds"
+			"gfx/models/portraits/gsm_elves/male/military/012.dds"
+			"gfx/models/portraits/gsm_elves/male/military/013.dds"
+			"gfx/models/portraits/gsm_elves/male/military/014.dds"
+			"gfx/models/portraits/gsm_elves/male/military/015.dds"
+			"gfx/models/portraits/gsm_elves/male/military/016.dds"
+			"gfx/models/portraits/gsm_elves/male/military/017.dds"
+			"gfx/models/portraits/gsm_elves/male/military/018.dds"
+			"gfx/models/portraits/gsm_elves/male/military/019.dds"
+			"gfx/models/portraits/gsm_elves/male/military/020.dds"
+			"gfx/models/portraits/gsm_elves/male/military/021.dds"
+			"gfx/models/portraits/gsm_elves/male/military/022.dds"
+			"gfx/models/portraits/gsm_elves/male/military/023.dds"
+			"gfx/models/portraits/gsm_elves/male/military/024.dds"
+			"gfx/models/portraits/gsm_elves/male/military/025.dds"
+		}
+	}
+	gsm_elves_female_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_elves/female/001.dds"
+			"gfx/models/portraits/gsm_elves/female/002.dds"
+			"gfx/models/portraits/gsm_elves/female/003.dds"
+			"gfx/models/portraits/gsm_elves/female/004.dds"
+			"gfx/models/portraits/gsm_elves/female/005.dds"
+			"gfx/models/portraits/gsm_elves/female/006.dds"
+			"gfx/models/portraits/gsm_elves/female/007.dds"
+			"gfx/models/portraits/gsm_elves/female/008.dds"
+			"gfx/models/portraits/gsm_elves/female/009.dds"
+			"gfx/models/portraits/gsm_elves/female/010.dds"
+			"gfx/models/portraits/gsm_elves/female/011.dds"
+			"gfx/models/portraits/gsm_elves/female/012.dds"
+			"gfx/models/portraits/gsm_elves/female/013.dds"
+			"gfx/models/portraits/gsm_elves/female/014.dds"
+			"gfx/models/portraits/gsm_elves/female/015.dds"
+			"gfx/models/portraits/gsm_elves/female/016.dds"
+			"gfx/models/portraits/gsm_elves/female/017.dds"
+			"gfx/models/portraits/gsm_elves/female/018.dds"
+			"gfx/models/portraits/gsm_elves/female/019.dds"
+			"gfx/models/portraits/gsm_elves/female/020.dds"
+			"gfx/models/portraits/gsm_elves/female/021.dds"
+			"gfx/models/portraits/gsm_elves/female/022.dds"
+			"gfx/models/portraits/gsm_elves/female/023.dds"
+			"gfx/models/portraits/gsm_elves/female/024.dds"
+			"gfx/models/portraits/gsm_elves/female/025.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	gsm_elves = {
+		default = gsm_elves_scientist_male_01
+		game_setup = {
+			add = {
+				trigger = {
+					ruler = {
+						gender = female
+					}
+				}
+				portraits = {
+					gsm_elves_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						gender = male
+					}
+				}
+				portraits = {
+					gsm_elves_scientist_male_01
+          gsm_elves_military_male_01
+          gsm_elves_ruler_male_01
+				}
+			}
+		}
+		species = {
+			# generic portrait for a species
+			add = {
+				portraits = {
+					gsm_elves_scientist_male_01
+				}
+			}
+		}
+		pop = {
+			#for a specific pop
+			add = {
+				trigger = {
+					NOR = {
+						species = {
+							species_gender = male
+						}
+					}
+				}
+				portraits = {
+					gsm_elves_scientist_male_01
+          gsm_elves_military_male_01
+          gsm_elves_ruler_male_01
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						species = {
+							species_gender = female
+						}
+					}
+				}
+				portraits = {
+					gsm_elves_female_01
+				}
+			}
+		}
+		leader = {
+			# scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					gsm_elves_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					gsm_elves_scientist_male_01
+          gsm_elves_military_male_01
+          gsm_elves_ruler_male_01
+				}
+			}
+		}
+		ruler = {
+			# portraits used for rulers
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					gsm_elves_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					gsm_elves_ruler_male_01
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+namespace = gsm_game_start
+event = {
+  id = gsm_game_start.1
+  hide_window = yes
+  is_triggered_only = yes
+}

@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.yml": "lua",
+        "*.mod": "paradox",
+        "*.gfx": "paradox",
+        "*.gui": "paradox",
+        "*.txt": "paradox"
+    },
+
+    "[lua]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 140,
+    }
+
+}

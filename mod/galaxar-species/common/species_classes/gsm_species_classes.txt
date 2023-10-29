@@ -1,0 +1,25 @@
+gsm_galaxar = {
+  archetype = BIOLOGICAL
+  randomized = yes
+  possible = {
+    authority = {
+      NOT = {
+        value = auth_machine_intelligence
+        text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+      }
+    }
+  }
+  portraits = {
+    "gsm_default"
+    "gsm_elves"
+    "gsm_marmeid"
+    "gsm_astral"
+    "gsm_necron"
+    "gsm_gamba"
+    "gsm_octopus"
+    "gsm_hastur"
+    "gsm_green_order"
+  }
+  graphical_culture = humanoid_01
+  move_pop_sound_effect = "moving_pop_confirmation"
+}

@@ -1,0 +1,7 @@
+is_human_species = {
+  OR = {
+    species_portrait = human
+    species_portrait = human_legacy
+    species_portrait = pla17
+  }
+}
