@@ -7,12 +7,16 @@ import { readdir, writeFile, stat, mkdir,  } from 'node:fs/promises';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Especifica o caminho da pasta e o arquivo de saída
+const PASTA_INICIAL = join(__dirname, '../assets/vargrosianos');
+const PASTA_DESTINO = PASTA_INICIAL.replace('assets', 'testmod');
 
-async function listarArquivosRecursivamente(pastaInicial, pastaDestino) {
-  // Inicializa um array para armazenar os caminhos dos arquivos
-  const listaDeArquivos = [];
 
-  async function listarArquivos(pastaAtual) {
+async function listar(pastaInicial) {
+  const arquivos = [];
+  const pastas = [];
+  
+  async function buscar(pastaAtual) {
     const itens = await readdir(pastaAtual);
     
     for (const item of itens) {
@@ -20,46 +24,55 @@ async function listarArquivosRecursivamente(pastaInicial, pastaDestino) {
       const testFolder = await stat(caminhoCompleto);
       
       if (testFolder.isDirectory()) {
-        await listarArquivos(caminhoCompleto);
+        pastas.push(caminhoCompleto);
+        await buscar(caminhoCompleto);
       } else {
-        listaDeArquivos.push(caminhoCompleto);
+        arquivos.push(caminhoCompleto);
       }
     }
   }
 
-  await listarArquivos(pastaInicial);
+  await buscar(pastaInicial);
 
-  console.log(listaDeArquivos);
-
-  return listaDeArquivos.map((caminho) => {
-    
-    const caminhoRelativo = caminho.replace(pastaInicial, '');
-    const caminhoDestino = join(pastaDestino, caminhoRelativo).replace('.png', '.dds');
-
-    return `"${caminho}" --format bc3 --quality normal --no-mips --zcmp 5 --output "${caminhoDestino}"`;
-
-  });
+  return { arquivos, pastas };
 }
 
-const criarArquivo = async (conteudo) => {
+async function batchFile(arquivos) {
+
+  const conteudo = arquivos.map((caminho) => {
+    const caminhoRelativo = caminho.replace(PASTA_INICIAL, '');
+    const caminhoDestino = join(PASTA_DESTINO, caminhoRelativo).replace('.png', '.dds');
+    return `"${caminho}" --format bc3 --quality normal --no-mips --zcmp 5 --output "${caminhoDestino}"`;
+  });
+
   const batch = resolve(__dirname, '../batch.nvdds');
   await writeFile(batch, conteudo.join('\n'));
-
 }
 
-// Especifica o caminho da pasta e o arquivo de saída
-const pastaInicial = join(__dirname, '../assets/avians');
-const pastaDestino = join(__dirname, '../testmod/avians');
 
-// Chama a função para listar os arquivos e escrever em um arquivo TXT
-
-const main = async () => {
-  const listaDeArquivos = await listarArquivosRecursivamente(pastaInicial, pastaDestino);
-  if (!existsSync(pastaDestino)) {
-    await mkdir(pastaDestino, { recursive: true });
+async function createFolders(pastas) {
+  if (!existsSync(PASTA_DESTINO)) {
+    await mkdir(PASTA_DESTINO, { recursive: true });
   }
 
-  await criarArquivo(listaDeArquivos);
+  for(const pasta of pastas) {
+    const pastaDestino = pasta.replace(PASTA_INICIAL, PASTA_DESTINO);
+    if (!existsSync(pastaDestino)) {
+      await mkdir(pastaDestino, { recursive: true });
+    }
+  }
+}
+
+
+const main = async () => {
+
+  const { arquivos, pastas } = await listar(PASTA_INICIAL);
+
+  console.log({arquivos, pastas});
+
+  await createFolders(pastas);
+  await batchFile(arquivos);
+
 }
 
 main();
