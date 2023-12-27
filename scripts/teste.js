@@ -1,7 +1,9 @@
 import { $, execa } from 'execa';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readdir, writeFile, stat } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { readdir, writeFile, stat, mkdir,  } from 'node:fs/promises';
+
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -46,13 +48,17 @@ const criarArquivo = async (conteudo) => {
 }
 
 // Especifica o caminho da pasta e o arquivo de saída
-const pastaInicial = join(__dirname, '../assets/elves');
-const pastaDestino = join(__dirname, '../testmod/elves');
+const pastaInicial = join(__dirname, '../assets/avians');
+const pastaDestino = join(__dirname, '../testmod/avians');
 
 // Chama a função para listar os arquivos e escrever em um arquivo TXT
 
 const main = async () => {
   const listaDeArquivos = await listarArquivosRecursivamente(pastaInicial, pastaDestino);
+  if (!existsSync(pastaDestino)) {
+    await mkdir(pastaDestino, { recursive: true });
+  }
+
   await criarArquivo(listaDeArquivos);
 }
 
