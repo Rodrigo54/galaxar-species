@@ -1,6 +1,6 @@
 name="Galaxar Species"
 path="mod/galaxar-species"
-supported_version="3.9.*"
+supported_version="3.10.*"
 tags={
     "Species"
 }
