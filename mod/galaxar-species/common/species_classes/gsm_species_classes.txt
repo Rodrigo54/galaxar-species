@@ -21,6 +21,10 @@ gsm_galaxar = {
     "gsm_green_order"
     "gsm_avians"
     "gsm_vargrosianos"
+    "gsm_new_order"
+    "gsm_cyborg"
+    "gsm_mercenary"
+    "gsm_knight"
   }
   graphical_culture = humanoid_01
   move_pop_sound_effect = "moving_pop_confirmation"
