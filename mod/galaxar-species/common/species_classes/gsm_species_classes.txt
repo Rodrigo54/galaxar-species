@@ -1,27 +1,82 @@
 gsm_galaxar = {
-  archetype = BIOLOGICAL
-  randomized = yes
-  possible = {
-    authority = {
-      NOT = {
-        value = auth_machine_intelligence
-        text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
-      }
-    }
-  }
-  portraits = {
-    "gsm_default"
-    "gsm_elves"
-    "gsm_marmeid"
-    "gsm_astral"
-    "gsm_necron"
-    "gsm_gamba"
-    "gsm_octopus"
-    "gsm_hastur"
-    "gsm_green_order"
-    "gsm_avians"
-    "gsm_vargrosianos"
-  }
-  graphical_culture = humanoid_01
-  move_pop_sound_effect = "moving_pop_confirmation"
+	archetype = BIOLOGICAL
+	randomized = yes
+	possible = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+			}
+		}
+	}
+	portraits = {
+		"gsm_default"
+		"gsm_elves"
+		"gsm_marmeid"
+		"gsm_astral"
+		"gsm_necron"
+		"gsm_gamba"
+		"gsm_octopus"
+		"gsm_hastur"
+		"gsm_green_order"
+		"gsm_avians"
+		"gsm_vargrosianos"
+		"gsm_new_order"
+		"gsm_cyborg"
+		"gsm_mercenary"
+		"gsm_knight"
+	}
+	graphical_culture = humanoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+gsm_presapient = {
+	archetype = PRESAPIENT
+	playable = {
+		always = no
+	}
+	portrait_modding = yes
+	portraits = {
+		"gsm_default"
+		"gsm_elves"
+		"gsm_marmeid"
+		"gsm_astral"
+		"gsm_necron"
+		"gsm_gamba"
+		"gsm_octopus"
+		"gsm_hastur"
+		"gsm_green_order"
+		"gsm_avians"
+		"gsm_vargrosianos"
+		"gsm_new_order"
+		"gsm_cyborg"
+		"gsm_mercenary"
+		"gsm_knight"
+	}
+	graphical_culture = humanoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+gsm_robot = {
+	archetype = MACHINE
+	randomized = yes
+	possible = {
+		authority = {
+			OR = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
+			}
+		}
+	}
+  gender = no
+	is_robotic = yes
+	use_climate_preference = no
+	portrait_modding = yes
+	portraits = {
+		"gsm_green_order"
+		"gsm_new_order"
+		"gsm_cyborg"
+	}
+	graphical_culture = humanoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
 }

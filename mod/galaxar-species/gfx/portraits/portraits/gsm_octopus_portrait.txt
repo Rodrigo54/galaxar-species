@@ -38,7 +38,10 @@ portrait_groups = {
       add = {
         trigger = {
           ruler = {
-            gender = female
+            OR = {
+              gender = female
+              gender = indeterminable
+            }
           }
         }
         portraits = {
@@ -48,7 +51,10 @@ portrait_groups = {
       add = {
         trigger = {
           ruler = {
-            gender = male
+            OR = {
+              gender = male
+              gender = indeterminable
+            }
           }
         }
         portraits = {
@@ -95,7 +101,10 @@ portrait_groups = {
       # scientists, generals, admirals, governor
       add = {
         trigger = {
-          gender = female
+          OR = {
+            gender = female
+            gender = indeterminable
+          }
         }
         portraits = {
           gsm_octopus_01
@@ -103,7 +112,10 @@ portrait_groups = {
       }
       add = {
         trigger = {
-          gender = male
+          OR = {
+            gender = male
+            gender = indeterminable
+          }
         }
         portraits = {
           gsm_octopus_01
@@ -114,7 +126,10 @@ portrait_groups = {
       # portraits used for rulers
       add = {
         trigger = {
-          gender = female
+          OR = {
+            gender = female
+            gender = indeterminable
+          }
         }
         portraits = {
           gsm_octopus_01
@@ -122,7 +137,10 @@ portrait_groups = {
       }
       add = {
         trigger = {
-          gender = male
+          OR = {
+            gender = male
+            gender = indeterminable
+          }
         }
         portraits = {
           gsm_octopus_01

@@ -140,3 +140,20 @@ gsm_galaxar = {
     name_list = "HUM4"
   }
 }
+
+gsm_robot = {
+  Cybrax = {
+    name = Cybrax
+    plural = Cybrax
+   home_planet = "Cybrax Core"
+    home_system = "Cybrax Nexus"
+    name_list = "HUM1"
+ }
+ Omnix = {
+    name = Omnix
+    plural = Omnix
+   home_planet = "Omnimax"
+    home_system = "Omnimix"
+    name_list = "HUM4"
+ }	
+}	

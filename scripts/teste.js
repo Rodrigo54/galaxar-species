@@ -8,8 +8,8 @@ import { readdir, writeFile, stat, mkdir,  } from 'node:fs/promises';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Especifica o caminho da pasta e o arquivo de saída
-const PASTA_INICIAL = join(__dirname, '../assets/vargrosianos');
-const PASTA_DESTINO = PASTA_INICIAL.replace('assets', 'testmod');
+const PASTA_INICIAL = join(__dirname, '../mod/galaxar-species/gfx/models/portraits');
+const PASTA_DESTINO = join(__dirname, '../testmod');
 
 
 async function listar(pastaInicial) {
@@ -42,7 +42,7 @@ async function batchFile(arquivos) {
   const conteudo = arquivos.map((caminho) => {
     const caminhoRelativo = caminho.replace(PASTA_INICIAL, '');
     const caminhoDestino = join(PASTA_DESTINO, caminhoRelativo).replace('.png', '.dds');
-    return `"${caminho}" --format bc3 --quality normal --no-mips --zcmp 5 --output "${caminhoDestino}"`;
+    return `"${caminho}" --format bc1a --quality production --no-mips --zcmp 5 --output "${caminhoDestino}"`;
   });
 
   const batch = resolve(__dirname, '../batch.nvdds');

@@ -1,1 +1,1 @@
---format bc3 --quality normal --no-mips --zcmp 5
+--format bc1a --quality production --no-mips --zcmp 5
