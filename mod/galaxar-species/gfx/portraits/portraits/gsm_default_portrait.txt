@@ -1,172 +1,189 @@
 portraits = {
-  gsm_default_male_01 = {
-    entity = "sl_humanoid_01_entity"
-    clothes_selector = "no_texture"
-    attachment_selector = "no_texture"
-    greeting_sound = "human_male_greetings_01"
-    custom_attachment_label = "HAIR_STYLE"
-    character_textures = {
-      "gfx/models/portraits/gsm_default/male_01.dds"
-      "gfx/models/portraits/gsm_default/male_02.dds"
-      "gfx/models/portraits/gsm_default/male_03.dds"
-      "gfx/models/portraits/gsm_default/male_04.dds"
-      "gfx/models/portraits/gsm_default/male_05.dds"
-      "gfx/models/portraits/gsm_default/male_06.dds"
-      "gfx/models/portraits/gsm_default/male_07.dds"
-      "gfx/models/portraits/gsm_default/male_08.dds"
-      "gfx/models/portraits/gsm_default/male_09.dds"
-      "gfx/models/portraits/gsm_default/male_10.dds"
-      "gfx/models/portraits/gsm_default/male_11.dds"
-      "gfx/models/portraits/gsm_default/male_12.dds"
-      "gfx/models/portraits/gsm_default/male_13.dds"
-      "gfx/models/portraits/gsm_default/male_14.dds"
-      "gfx/models/portraits/gsm_default/male_15.dds"
-      "gfx/models/portraits/gsm_default/male_16.dds"
-      "gfx/models/portraits/gsm_default/male_17.dds"
-      "gfx/models/portraits/gsm_default/male_18.dds"
-      "gfx/models/portraits/gsm_default/male_19.dds"
-      "gfx/models/portraits/gsm_default/male_20.dds"
-      "gfx/models/portraits/gsm_default/male_21.dds"
-      "gfx/models/portraits/gsm_default/male_22.dds"
-      "gfx/models/portraits/gsm_default/male_23.dds"
-      "gfx/models/portraits/gsm_default/male_24.dds"
-      "gfx/models/portraits/gsm_default/male_25.dds"
-    }
-  }
-
-  gsm_default_female_01 = {
-    entity = "sl_humanoid_01_entity"
-    clothes_selector = "no_texture"
-    attachment_selector = "no_texture"
-    greeting_sound = "human_female_greetings_01"
-    custom_attachment_label = "HAIR_STYLE"
-    character_textures = {
-      "gfx/models/portraits/gsm_default/female_01.dds"
-      "gfx/models/portraits/gsm_default/female_02.dds"
-      "gfx/models/portraits/gsm_default/female_03.dds"
-      "gfx/models/portraits/gsm_default/female_04.dds"
-      "gfx/models/portraits/gsm_default/female_05.dds"
-      "gfx/models/portraits/gsm_default/female_06.dds"
-      "gfx/models/portraits/gsm_default/female_07.dds"
-      "gfx/models/portraits/gsm_default/female_08.dds"
-      "gfx/models/portraits/gsm_default/female_09.dds"
-      "gfx/models/portraits/gsm_default/female_10.dds"
-      "gfx/models/portraits/gsm_default/female_11.dds"
-      "gfx/models/portraits/gsm_default/female_12.dds"
-      "gfx/models/portraits/gsm_default/female_13.dds"
-      "gfx/models/portraits/gsm_default/female_14.dds"
-      "gfx/models/portraits/gsm_default/female_15.dds"
-      "gfx/models/portraits/gsm_default/female_16.dds"
-      "gfx/models/portraits/gsm_default/female_17.dds"
-      "gfx/models/portraits/gsm_default/female_18.dds"
-      "gfx/models/portraits/gsm_default/female_19.dds"
-      "gfx/models/portraits/gsm_default/female_20.dds"
-      "gfx/models/portraits/gsm_default/female_21.dds"
-      "gfx/models/portraits/gsm_default/female_22.dds"
-      "gfx/models/portraits/gsm_default/female_23.dds"
-      "gfx/models/portraits/gsm_default/female_24.dds"
-      "gfx/models/portraits/gsm_default/female_25.dds"
-    }
-  }
+	gsm_default_male_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_male_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_default/male_01.dds"
+			"gfx/models/portraits/gsm_default/male_02.dds"
+			"gfx/models/portraits/gsm_default/male_03.dds"
+			"gfx/models/portraits/gsm_default/male_04.dds"
+			"gfx/models/portraits/gsm_default/male_05.dds"
+			"gfx/models/portraits/gsm_default/male_06.dds"
+			"gfx/models/portraits/gsm_default/male_07.dds"
+			"gfx/models/portraits/gsm_default/male_08.dds"
+			"gfx/models/portraits/gsm_default/male_09.dds"
+			"gfx/models/portraits/gsm_default/male_10.dds"
+			"gfx/models/portraits/gsm_default/male_11.dds"
+			"gfx/models/portraits/gsm_default/male_12.dds"
+			"gfx/models/portraits/gsm_default/male_13.dds"
+			"gfx/models/portraits/gsm_default/male_14.dds"
+			"gfx/models/portraits/gsm_default/male_15.dds"
+			"gfx/models/portraits/gsm_default/male_16.dds"
+			"gfx/models/portraits/gsm_default/male_17.dds"
+			"gfx/models/portraits/gsm_default/male_18.dds"
+			"gfx/models/portraits/gsm_default/male_19.dds"
+			"gfx/models/portraits/gsm_default/male_20.dds"
+			"gfx/models/portraits/gsm_default/male_21.dds"
+			"gfx/models/portraits/gsm_default/male_22.dds"
+			"gfx/models/portraits/gsm_default/male_23.dds"
+			"gfx/models/portraits/gsm_default/male_24.dds"
+			"gfx/models/portraits/gsm_default/male_25.dds"
+		}
+	}
+	gsm_default_female_01 = {
+		entity = "sl_humanoid_01_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_01"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/gsm_default/female_01.dds"
+			"gfx/models/portraits/gsm_default/female_02.dds"
+			"gfx/models/portraits/gsm_default/female_03.dds"
+			"gfx/models/portraits/gsm_default/female_04.dds"
+			"gfx/models/portraits/gsm_default/female_05.dds"
+			"gfx/models/portraits/gsm_default/female_06.dds"
+			"gfx/models/portraits/gsm_default/female_07.dds"
+			"gfx/models/portraits/gsm_default/female_08.dds"
+			"gfx/models/portraits/gsm_default/female_09.dds"
+			"gfx/models/portraits/gsm_default/female_10.dds"
+			"gfx/models/portraits/gsm_default/female_11.dds"
+			"gfx/models/portraits/gsm_default/female_12.dds"
+			"gfx/models/portraits/gsm_default/female_13.dds"
+			"gfx/models/portraits/gsm_default/female_14.dds"
+			"gfx/models/portraits/gsm_default/female_15.dds"
+			"gfx/models/portraits/gsm_default/female_16.dds"
+			"gfx/models/portraits/gsm_default/female_17.dds"
+			"gfx/models/portraits/gsm_default/female_18.dds"
+			"gfx/models/portraits/gsm_default/female_19.dds"
+			"gfx/models/portraits/gsm_default/female_20.dds"
+			"gfx/models/portraits/gsm_default/female_21.dds"
+			"gfx/models/portraits/gsm_default/female_22.dds"
+			"gfx/models/portraits/gsm_default/female_23.dds"
+			"gfx/models/portraits/gsm_default/female_24.dds"
+			"gfx/models/portraits/gsm_default/female_25.dds"
+		}
+	}
 }
 
 portrait_groups = {
-  gsm_default = {
-    default = gsm_default_male_01
-    game_setup = {
-      add = {
-        trigger = {
-          ruler = {
-            gender = female
-          }
-        }
-        portraits = {
-          gsm_default_female_01
-        }
-      }
-      add = {
-        trigger = {
-          ruler = {
-            gender = male
-          }
-        }
-        portraits = {
-          gsm_default_male_01
-        }
-      }
-    }
-    species = {
-      # generic portrait for a species
-      add = {
-        portraits = {
-          gsm_default_male_01
-        }
-      }
-    }
-    pop = {
-      #for a specific pop
-      add = {
-        trigger = {
-          NOR = {
-            species = {
-              species_gender = male
-            }
-          }
-        }
-        portraits = {
-          gsm_default_male_01
-        }
-      }
-      add = {
-        trigger = {
-          NOR = {
-            species = {
-              species_gender = female
-            }
-          }
-        }
-        portraits = {
-          gsm_default_female_01
-        }
-      }
-    }
-    leader = {
-      # scientists, generals, admirals, governor
-      add = {
-        trigger = {
-          gender = female
-        }
-        portraits = {
-          gsm_default_female_01
-        }
-      }
-      add = {
-        trigger = {
-          gender = male
-        }
-        portraits = {
-          gsm_default_male_01
-        }
-      }
-    }
-    ruler = {
-      # portraits used for rulers
-      add = {
-        trigger = {
-          gender = female
-        }
-        portraits = {
-          gsm_default_female_01
-        }
-      }
-      add = {
-        trigger = {
-          gender = male
-        }
-        portraits = {
-          gsm_default_male_01
-        }
-      }
-    }
-  }
+	gsm_default = {
+		default = gsm_default_male_01
+		game_setup = {
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					gsm_default_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					gsm_default_male_01
+				}
+			}
+		}
+		species = {
+			# generic portrait for a species
+			add = {
+				portraits = {
+					gsm_default_male_01
+				}
+			}
+		}
+		pop = {
+			#for a specific pop
+			add = {
+				trigger = {
+					NOR = {
+						species = {
+							species_gender = male
+						}
+					}
+				}
+				portraits = {
+					gsm_default_male_01
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						species = {
+							species_gender = female
+						}
+					}
+				}
+				portraits = {
+					gsm_default_female_01
+				}
+			}
+		}
+		leader = {
+			# scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					gsm_default_female_01
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					gsm_default_male_01
+				}
+			}
+		}
+		ruler = {
+			# portraits used for rulers
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					gsm_default_female_01
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					gsm_default_male_01
+				}
+			}
+		}
+	}
 }
