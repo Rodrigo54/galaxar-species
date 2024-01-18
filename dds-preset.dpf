@@ -1,1 +1,1 @@
---format bc1 --quality production --no-mips --zcmp 5
+--format bc1a --quality production --no-mips --zcmp 5
