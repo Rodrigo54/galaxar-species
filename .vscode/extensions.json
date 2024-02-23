@@ -1,6 +1,6 @@
 {
-    "recommendations": [
-        "tboby.cwtools-vscode",
-        "tboby.paradox-syntax"
-    ]
+  "recommendations": [
+    "tboby.cwtools-vscode",
+    "dragon-archer.paradox-highlight"
+  ]
 }
