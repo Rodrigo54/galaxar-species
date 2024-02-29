@@ -1,5 +1,6 @@
 .cwtools
 node_modules
 testmod
+output
 batch.nvdds
 lista_de_arquivos.txt

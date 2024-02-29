@@ -1,15 +1,26 @@
 {
-    "files.associations": {
-        "*.yml": "lua",
-        "*.mod": "paradox",
-        "*.gfx": "paradox",
-        "*.gui": "paradox",
-        "*.txt": "paradox"
-    },
-
-    "[lua]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 140,
-    }
-
+  "files.associations": {
+    "*.yml": "paradox",
+    "*.mod": "paradox",
+    "*.gfx": "paradox",
+    "*.gui": "paradox",
+    "*.txt": "paradox"
+  },
+  "[lua]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 140
+  },
+  "[paradox]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 140
+  },
+  "cwtools.errors.ignorefiles": [
+    "README.txt",
+    "credits.txt",
+    "credits_l_simp_chinese.txt",
+    "reference.txt",
+    "startup_info.txt",
+    "LICENSE.txt"
+  ],
+  "cwtools.ignore_patterns": ["node_modules/**/*.txt"]
 }
