@@ -51,6 +51,20 @@ portraits = {
 			"gfx/models/portraits/gsm_elves/male/rulers/009.dds"
 			"gfx/models/portraits/gsm_elves/male/rulers/010.dds"
 			"gfx/models/portraits/gsm_elves/male/rulers/011.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/012.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/013.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/014.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/015.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/016.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/017.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/018.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/019.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/020.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/021.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/022.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/023.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/024.dds"
+			"gfx/models/portraits/gsm_elves/male/rulers/025.dds"
 		}
 	}
 	gsm_elves_military_male_01 = {
@@ -88,45 +102,79 @@ portraits = {
 			"gfx/models/portraits/gsm_elves/male/military/025.dds"
 		}
 	}
-	gsm_elves_female_01 = {
+	gsm_elves_female_scientists_01 = {
 		entity = "sl_humanoid_01_entity"
 		clothes_selector = "no_texture"
 		attachment_selector = "no_texture"
 		greeting_sound = "human_female_greetings_01"
 		custom_attachment_label = "HAIR_STYLE"
 		character_textures = {
-			"gfx/models/portraits/gsm_elves/female/001.dds"
-			"gfx/models/portraits/gsm_elves/female/002.dds"
-			"gfx/models/portraits/gsm_elves/female/003.dds"
-			"gfx/models/portraits/gsm_elves/female/004.dds"
-			"gfx/models/portraits/gsm_elves/female/005.dds"
-			"gfx/models/portraits/gsm_elves/female/006.dds"
-			"gfx/models/portraits/gsm_elves/female/007.dds"
-			"gfx/models/portraits/gsm_elves/female/008.dds"
-			"gfx/models/portraits/gsm_elves/female/009.dds"
-			"gfx/models/portraits/gsm_elves/female/010.dds"
-			"gfx/models/portraits/gsm_elves/female/011.dds"
-			"gfx/models/portraits/gsm_elves/female/012.dds"
-			"gfx/models/portraits/gsm_elves/female/013.dds"
-			"gfx/models/portraits/gsm_elves/female/014.dds"
-			"gfx/models/portraits/gsm_elves/female/015.dds"
-			"gfx/models/portraits/gsm_elves/female/016.dds"
-			"gfx/models/portraits/gsm_elves/female/017.dds"
-			"gfx/models/portraits/gsm_elves/female/018.dds"
-			"gfx/models/portraits/gsm_elves/female/019.dds"
-			"gfx/models/portraits/gsm_elves/female/020.dds"
-			"gfx/models/portraits/gsm_elves/female/021.dds"
-			"gfx/models/portraits/gsm_elves/female/022.dds"
-			"gfx/models/portraits/gsm_elves/female/023.dds"
-			"gfx/models/portraits/gsm_elves/female/024.dds"
-			"gfx/models/portraits/gsm_elves/female/025.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/001.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/002.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/003.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/004.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/005.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/006.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/007.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/008.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/009.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/010.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/011.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/012.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/013.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/014.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/015.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/016.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/017.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/018.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/019.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/020.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/021.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/022.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/023.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/024.dds"
+			"gfx/models/portraits/gsm_elves/female/scientists/025.dds"
 		}
 	}
+  gsm_elves_female_rulers_01 = {
+    entity = "sl_humanoid_01_entity"
+    clothes_selector = "no_texture"
+    attachment_selector = "no_texture"
+    greeting_sound = "human_female_greetings_01"
+    custom_attachment_label = "HAIR_STYLE"
+    character_textures = {
+      "gfx/models/portraits/gsm_elves/female/rulers/001.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/002.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/003.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/004.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/005.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/006.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/007.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/008.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/009.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/010.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/011.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/012.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/013.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/014.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/015.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/016.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/017.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/018.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/019.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/020.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/021.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/022.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/023.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/024.dds"
+      "gfx/models/portraits/gsm_elves/female/rulers/025.dds"
+    }
+  }
 }
 
 portrait_groups = {
 	gsm_elves = {
-		default = gsm_elves_scientist_male_01
+		default = gsm_elves_ruler_male_01
 		game_setup = {
 			add = {
 				trigger = {
@@ -138,7 +186,8 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_elves_female_01
+					gsm_elves_female_scientists_01
+          gsm_elves_female_rulers_01
 				}
 			}
 			add = {
@@ -190,7 +239,8 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_elves_female_01
+					gsm_elves_female_scientists_01
+          gsm_elves_female_rulers_01
 				}
 			}
 		}
@@ -204,7 +254,7 @@ portrait_groups = {
           }
 				}
 				portraits = {
-					gsm_elves_female_01
+					gsm_elves_female_scientists_01
 				}
 			}
 			add = {
@@ -231,7 +281,7 @@ portrait_groups = {
           }
 				}
 				portraits = {
-					gsm_elves_female_01
+					gsm_elves_female_rulers_01
 				}
 			}
 			add = {
