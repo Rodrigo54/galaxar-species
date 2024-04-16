@@ -159,8 +159,8 @@ const createTranslation = async (objectData: any, metaData: any) => {
 
   const content =
     firstLine +
-    `  name_list_gsm_brazil: ${JSON.stringify(name)}\n` +
-    `  name_list_gsm_brazil_desc: ${JSON.stringify(desc)}\n` +
+    `  name_list_${fileName}: ${JSON.stringify(name)}\n` +
+    `  name_list_${fileName}_desc: ${JSON.stringify(desc)}\n` +
     TokensNames.map(([token, value]) => `  ${token}: "${value}"`).join('\n');
 
   const blob = Buffer.from('\uFEFF' + content, 'utf8');
