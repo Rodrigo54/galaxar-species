@@ -14,6 +14,18 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 140
   },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 160,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "explicit"
+    }
+  },
   "cwtools.errors.ignorefiles": [
     "README.txt",
     "credits.txt",
@@ -22,5 +34,16 @@
     "startup_info.txt",
     "LICENSE.txt"
   ],
-  "cwtools.ignore_patterns": ["node_modules/**/*.txt"]
+  "cwtools.ignore_patterns": ["node_modules/**/*.txt"],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    "assets/name_lists/*.json",
+    ".vscode-insiders"
+  ],
+  "cSpell.words": [
+    "Jomini"
+  ]
 }
