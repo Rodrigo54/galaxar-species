@@ -1,0 +1,115 @@
+galaxar = {
+	name = GSM_GALAXAR
+
+	sets = {
+		gsm_humanoids
+    gsm_mammalians
+    gsm_molluscoids
+    gsm_aquatics
+    gsm_avians
+    gsm_cybernetics
+    gsm_robot
+	}
+}
+
+humanoids = {
+	name = HUM
+
+	sets = {
+    cybernetic_humans
+		humans
+		humanoids
+		cybernetic_humanoids
+		synthetic_humanoids
+		gsm_humanoids
+    gsm_cybernetics
+	}
+}
+
+machines = {
+	name = MACHINE
+
+	sets = {
+    machines
+		gsm_machine
+	}
+}
+
+mammalians = {
+	name = MAM
+
+	sets = {
+    mammalians
+		cybernetic_mammalians
+		gsm_mammalians
+	}
+}
+
+avians = {
+	name = AVI
+
+	sets = {
+    avians
+		cybernetic_avians
+		synthetic_avians
+		gsm_avians
+	}
+}
+
+molluscoids = {
+	name = MOL
+
+	sets = {
+    molluscoids
+		synthetic_molluscoids
+		gsm_molluscoids
+	}
+}
+
+necroids = {
+	name = NECROID
+
+	sets = {
+    necroids
+		gsm_necroids
+	}
+}
+
+aquatics = {
+	name = AQUATIC
+
+	sets = {
+    aquatics
+		synthetic_aquatics
+		gsm_aquatics
+	}
+}
+
+cybernetics = {
+	name = CYBERNETIC
+
+	sets = {
+    cybernetic_humans
+		cybernetic_humanoids
+		cybernetic_mammalians
+		cybernetic_reptilians
+		cybernetic_avians
+		cybernetic_arthropoids
+		cybernetic_fungoids
+    gsm_cybernetics
+    gsm_robot
+	}
+}
+
+synthetics = {
+	name = SYNTH
+
+	sets = {
+    synthetic_humanoids
+		synthetic_avians
+		synthetic_arthropoids
+		synthetic_molluscoids
+		synthetic_aquatics
+		gsm_robot
+	}
+}
