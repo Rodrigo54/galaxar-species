@@ -1,21 +1,3 @@
-# gsm_galaxar = {
-# 	species_class = gsm_galaxar
-# 	portraits = {
-# 		"gsm_default"
-# 		"gsm_elves"
-# 		"gsm_marmeid"
-# 		"gsm_astral"
-# 		"gsm_necron"
-# 		"gsm_gamba"
-# 		"gsm_octopus"
-# 		"gsm_hastur"
-# 		"gsm_avians"
-# 		"gsm_vargrosianos"
-# 		"gsm_mercenary"
-# 		"gsm_knight"
-# 	}
-# }
-
 gsm_humanoids = {
 	species_class = HUM
 	portraits = {
@@ -29,45 +11,45 @@ gsm_humanoids = {
 }
 
 gsm_mammalians = {
-  species_class = MAM
-  portraits = {
-    "gsm_gamba"
-  }
+	species_class = MAM
+	portraits = {
+		"gsm_gamba"
+	}
 }
 
 gsm_molluscoids = {
-  species_class = MOL
-  portraits = {
-    "gsm_octopus"
+	species_class = MOL
+	portraits = {
+		"gsm_octopus"
 		"gsm_hastur"
-  }
+	}
 }
 
 gsm_necroids = {
-  species_class = NECROID
-  portraits = {
-    "gsm_necron"
-  }
+	species_class = NECROID
+	portraits = {
+		"gsm_necron"
+	}
 }
 
 gsm_aquatics = {
-  species_class = AQUATIC
-  portraits = {
-    "gsm_marmeid"
-  }
+	species_class = AQUATIC
+	portraits = {
+		"gsm_marmeid"
+	}
 }
 
 gsm_avians = {
-  species_class = AVI
-  portraits = {
-    "gsm_avians"
-  }
+	species_class = AVI
+	portraits = {
+		"gsm_avians"
+	}
 }
 
 gsm_cybernetics = {
 	species_class = HUM
 	portraits = {
-    "gsm_mercenary"
+		"gsm_mercenary"
 	}
 }
 
