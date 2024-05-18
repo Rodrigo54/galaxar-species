@@ -1,6 +1,9 @@
 gsm_galaxar = {
 	archetype = BIOLOGICAL
 	randomized = yes
+  playable = {
+		always = no
+	}
 	possible = {
 		authority = {
 			NOT = {
@@ -57,6 +60,9 @@ gsm_presapient = {
 gsm_robot = {
 	archetype = MACHINE
 	randomized = yes
+  playable = {
+		always = no
+	}
 	possible = {
 		authority = {
 			OR = {
@@ -73,6 +79,7 @@ gsm_robot = {
 		"gsm_green_order"
 		"gsm_new_order"
 		"gsm_cyborg"
+		"gsm_timbot"
 	}
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
