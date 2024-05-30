@@ -6,7 +6,9 @@
   "scripts": {
     "copy": "pwsh scripts/copy.ps1",
     "overwrite": "pwsh scripts/overwrite.ps1",
-    "converter": "bun scripts/converter.ts"
+    "converter": "bun run portrait && bun run rooms",
+    "portrait": "bun scripts/processPortraits.ts",
+    "rooms": "bun scripts/processRooms.ts"
   },
   "author": "",
   "license": "ISC",
