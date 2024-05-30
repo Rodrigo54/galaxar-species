@@ -15,7 +15,7 @@ gsm_galaxar = {
 	portraits = {
 		"gsm_default"
 		"gsm_elves"
-		"gsm_marmeid"
+		"gsm_mermaids"
 		"gsm_astral"
 		"gsm_necron"
 		"gsm_gamba"

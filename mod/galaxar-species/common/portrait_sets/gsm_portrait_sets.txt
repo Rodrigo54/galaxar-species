@@ -35,7 +35,7 @@ gsm_necroids = {
 gsm_aquatics = {
 	species_class = AQUATIC
 	portraits = {
-		"gsm_marmeid"
+		"gsm_mermaids"
 	}
 }
 
