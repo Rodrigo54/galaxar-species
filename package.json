@@ -1,12 +1,14 @@
 {
   "name": "galaxar-species",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Mod para o jogo Stellaris, da Paradox Interactive.",
   "type": "module",
   "scripts": {
     "copy": "pwsh scripts/copy.ps1",
     "overwrite": "pwsh scripts/overwrite.ps1",
-    "converter": "bun scripts/converter.ts"
+    "converter": "bun run portrait && bun run rooms",
+    "portrait": "bun scripts/processPortraits.ts",
+    "rooms": "bun scripts/processRooms.ts"
   },
   "author": "",
   "license": "ISC",

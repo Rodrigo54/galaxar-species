@@ -35,7 +35,7 @@ gsm_necroids = {
 gsm_aquatics = {
 	species_class = AQUATIC
 	portraits = {
-		"gsm_marmeid"
+		"gsm_mermaids"
 	}
 }
 
@@ -59,6 +59,7 @@ gsm_robot = {
 		"gsm_green_order"
 		"gsm_new_order"
 		"gsm_cyborg"
+		"gsm_timbot"
 	}
 }
 
@@ -68,5 +69,6 @@ gsm_machine = {
 		"gsm_green_order"
 		"gsm_new_order"
 		"gsm_cyborg"
+    "gsm_timbot"
 	}
 }
