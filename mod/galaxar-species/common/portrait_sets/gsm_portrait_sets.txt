@@ -3,6 +3,7 @@ gsm_humanoids = {
 	portraits = {
 		"gsm_default"
 		"gsm_elves"
+		"gsm_high_elves"
 		"gsm_astral"
 		"gsm_necron"
 		"gsm_vargrosianos"

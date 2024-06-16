@@ -1,9 +1,6 @@
 gsm_galaxar = {
 	archetype = BIOLOGICAL
 	randomized = yes
-  playable = {
-		always = no
-	}
 	possible = {
 		authority = {
 			NOT = {
@@ -15,6 +12,7 @@ gsm_galaxar = {
 	portraits = {
 		"gsm_default"
 		"gsm_elves"
+		"gsm_high_elves"
 		"gsm_mermaids"
 		"gsm_astral"
 		"gsm_necron"
@@ -43,6 +41,7 @@ gsm_presapient = {
 	portraits = {
 		"gsm_default"
 		"gsm_elves"
+		"gsm_high_elves"
 		"gsm_marmeid"
 		"gsm_astral"
 		"gsm_necron"
@@ -60,17 +59,6 @@ gsm_presapient = {
 gsm_robot = {
 	archetype = MACHINE
 	randomized = yes
-  playable = {
-		always = no
-	}
-	possible = {
-		authority = {
-			OR = {
-				value = auth_machine_intelligence
-				text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
-			}
-		}
-	}
   gender = no
 	is_robotic = yes
 	use_climate_preference = no
