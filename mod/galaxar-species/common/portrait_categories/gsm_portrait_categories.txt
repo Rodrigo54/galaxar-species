@@ -14,11 +14,6 @@ galaxar = {
 humanoids = {
 	name = HUM
 	sets = {
-		cybernetic_humans
-		humans
-		humanoids
-		cybernetic_humanoids
-		synthetic_humanoids
 		gsm_humanoids
 		gsm_cybernetics
 	}
@@ -27,7 +22,6 @@ humanoids = {
 machines = {
 	name = MACHINE
 	sets = {
-		machines
 		gsm_machine
 	}
 }
@@ -35,8 +29,6 @@ machines = {
 mammalians = {
 	name = MAM
 	sets = {
-		mammalians
-		cybernetic_mammalians
 		gsm_mammalians
 	}
 }
@@ -44,9 +36,6 @@ mammalians = {
 avians = {
 	name = AVI
 	sets = {
-		avians
-		cybernetic_avians
-		synthetic_avians
 		gsm_avians
 	}
 }
@@ -54,8 +43,6 @@ avians = {
 molluscoids = {
 	name = MOL
 	sets = {
-		molluscoids
-		synthetic_molluscoids
 		gsm_molluscoids
 	}
 }
@@ -63,7 +50,6 @@ molluscoids = {
 necroids = {
 	name = NECROID
 	sets = {
-		necroids
 		gsm_necroids
 	}
 }
@@ -71,8 +57,6 @@ necroids = {
 aquatics = {
 	name = AQUATIC
 	sets = {
-		aquatics
-		synthetic_aquatics
 		gsm_aquatics
 	}
 }
@@ -80,13 +64,6 @@ aquatics = {
 cybernetics = {
 	name = CYBERNETIC
 	sets = {
-		cybernetic_humans
-		cybernetic_humanoids
-		cybernetic_mammalians
-		cybernetic_reptilians
-		cybernetic_avians
-		cybernetic_arthropoids
-		cybernetic_fungoids
 		gsm_cybernetics
 		gsm_robot
 	}
@@ -95,11 +72,6 @@ cybernetics = {
 synthetics = {
 	name = SYNTH
 	sets = {
-		synthetic_humanoids
-		synthetic_avians
-		synthetic_arthropoids
-		synthetic_molluscoids
-		synthetic_aquatics
 		gsm_robot
 	}
 }
