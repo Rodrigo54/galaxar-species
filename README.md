@@ -1,4 +1,4 @@
-# Multiverse Species
+# Galaxar Species
 
 [![Steam Downloads](https://img.shields.io/steam/downloads/3054793206?style=plastic&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3054793206)
 ![Steam Favorites](https://img.shields.io/steam/favorites/3054793206?style=plastic&logo=steam)
