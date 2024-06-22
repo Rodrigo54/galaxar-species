@@ -9,10 +9,14 @@ gsm_galaxar = {
 			}
 		}
 	}
+  playable = {
+		always = no
+	}
 	portraits = {
 		"gsm_default"
 		"gsm_elves"
 		"gsm_high_elves"
+    "gsm_green_elves"
 		"gsm_mermaids"
 		"gsm_astral"
 		"gsm_necron"
@@ -51,6 +55,7 @@ gsm_presapient = {
 		"gsm_green_order"
 		"gsm_avians"
 		"gsm_vargrosianos"
+    "gsm_green_elves"
 	}
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
@@ -59,6 +64,9 @@ gsm_presapient = {
 gsm_robot = {
 	archetype = MACHINE
 	randomized = yes
+  playable = {
+		always = no
+	}
   gender = no
 	is_robotic = yes
 	use_climate_preference = no
