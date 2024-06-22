@@ -8,6 +8,7 @@ gsm_humanoids = {
 		"gsm_necron"
 		"gsm_vargrosianos"
 		"gsm_knight"
+    "gsm_green_elves"
 	}
 }
 
@@ -37,6 +38,13 @@ gsm_aquatics = {
 	species_class = AQUATIC
 	portraits = {
 		"gsm_mermaids"
+	}
+}
+
+gsm_plantoids = {
+	species_class = PLANT
+	portraits = {
+		"gsm_green_elves"
 	}
 }
 

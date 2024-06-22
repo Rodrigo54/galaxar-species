@@ -54,6 +54,13 @@ necroids = {
 	}
 }
 
+plantoids = {
+	name = PLANT
+	sets = {
+		gsm_plantoids
+	}
+}
+
 aquatics = {
 	name = AQUATIC
 	sets = {
