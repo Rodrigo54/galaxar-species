@@ -1,5 +1,5 @@
 name = "Galaxar Species"
-version = "1.5.2"
+version = "1.5.3"
 path = "mod/galaxar-species"
 tags = {
 	"Species"
