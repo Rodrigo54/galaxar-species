@@ -114,7 +114,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_astral_male_01
+					gsm_astral_female_01
 				}
 			}
 			add = {
@@ -126,7 +126,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_astral_female_01
+          gsm_astral_male_01					
 				}
 			}
 		}

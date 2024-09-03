@@ -111,7 +111,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_vargrosianos_male_01
+          gsm_vargrosianos_female_01
         }
       }
       add = {
@@ -123,7 +123,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_vargrosianos_female_01
+          gsm_vargrosianos_male_01
         }
       }
     }

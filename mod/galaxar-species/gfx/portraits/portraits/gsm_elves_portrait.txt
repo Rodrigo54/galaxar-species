@@ -120,7 +120,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_elves_scientist_male
+					gsm_elves_scientist_female
 				}
 			}
 			add = {
@@ -132,7 +132,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_elves_scientist_female
+					gsm_elves_scientist_male
 				}
 			}
 		}

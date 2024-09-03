@@ -113,7 +113,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_necron_male_01
+          gsm_necron_female_01
         }
       }
       add = {
@@ -125,7 +125,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_necron_female_01
+          gsm_necron_male_01
         }
       }
     }

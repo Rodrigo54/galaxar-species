@@ -119,7 +119,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_default_male_01
+					gsm_default_female_01
 				}
 			}
 			add = {
@@ -131,7 +131,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_default_female_01
+					gsm_default_male_01
 				}
 			}
 		}
