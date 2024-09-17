@@ -5,5 +5,5 @@ tags = {
 	"Species"
 }
 picture = "thumbnail.png"
-supported_version = "v3.12.*"
+supported_version = "v3.13.*"
 remote_file_id = "3054793206"
