@@ -90,7 +90,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_green_elves_male
+					gsm_green_elves_female
 				}
 			}
 			add = {
@@ -102,7 +102,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					gsm_green_elves_female
+					gsm_green_elves_male
 				}
 			}
 		}

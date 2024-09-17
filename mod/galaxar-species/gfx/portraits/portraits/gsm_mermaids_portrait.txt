@@ -120,7 +120,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_mermaids_male_01
+          gsm_mermaids_female_01
         }
       }
       add = {
@@ -132,7 +132,7 @@ portrait_groups = {
           }
         }
         portraits = {
-          gsm_mermaids_female_01
+          gsm_mermaids_male_01
         }
       }
     }
