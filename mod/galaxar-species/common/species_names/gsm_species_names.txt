@@ -1,4 +1,4 @@
-gsm_galaxar = {
+HUM = {
 	# Altmer names
   Nirn = {
 		name = "Altmer"
@@ -157,7 +157,7 @@ gsm_galaxar = {
 	}
 }
 
-gsm_robot = {
+MACHINE = {
 	Cybrax = {
 		name = "Cybrax"
 		plural = "Cybrax"
