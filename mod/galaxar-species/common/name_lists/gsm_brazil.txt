@@ -1,5 +1,5 @@
 gsm_brazil={
-  category = "Humanoid"
+  category="Humanoid"
   randomized=yes
   ship_names={
     generic={

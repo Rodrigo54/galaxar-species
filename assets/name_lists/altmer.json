@@ -2,6 +2,7 @@
   "name": "Galaxar - Altmer",
   "desc": "§YLeaders:§! Elurmeril , Antur Ravenwatch\n§YShips:§! Sunantorwen, Suriwene\n§YFleets:§! Justiciar Squadron, Justiciar Star Order\n§YColonies:§! Tanzelwil, Eton Nir",
   "gsm_altmer": {
+    "category": "Humanoid",
     "randomized": true,
     "ship_names": {
       "generic": [
@@ -1344,7 +1345,7 @@
       }
     },
     "character_names": {
-      "elderscrolls-elf": {
+      "default": {
         "weight": 100,
         "first_names_male": [
           "Aenthannir",
