@@ -1,5 +1,6 @@
 gsm_brazil={
-  randomized=no
+  category="Humanoid"
+  randomized=yes
   ship_names={
     generic={
       "Poti" "Gurupi" "Antares" "Rio Branco" "Paraguassú" "Araçatuba" "Amazonas" "Maracanã" "Cruzeiro do Sul"
@@ -188,7 +189,7 @@ gsm_brazil={
     }
   }
   character_names={
-    portuguese={
+    default={
       weight=7
       first_names_male={
         "Abel" "Abílio" "Abraão" "Adalberto" "Adão" "Adelmar" "Ademir" "Adriano" "Afonso" "Agostinho" "Alberto" "Albino" "Alcides" "Alexandre" "Alfredo" "Aloísio" "Álvaro" "Amancio" "Amando" "Ambrósio" "Américo" "André" "Ângelo" "Anselmo" "Antelmo" "António" "Armando" "Arsenio" "Artur" "Atíla" "Augusto" "Aurélio" "Bartolomeu" "Benedito" "Benjamim" "Bento" "Bernardo" "Bonifacio" "Breno" "Brian" "Bruno" "Caetano" "Caio" "Camilo" "Cândido" "Carlos" "Carmo" "Cassiano" "Cassio" "Cauã" "Cauê" "Carlinhos" "Casimiro" "Cecilio" "Celestino" "Celio" "Celso" "César" "Cezar" "Chico" "Cícero" "Ciro" "Cláudio" "Cleber" "Cleiton" "Cornélio" "Cristiano" "Cristóvão" "Daniel" "Danilo" "Dante" "Davi" "David" "Demétrio" "Denis" "Diego" "Dimas" "Diniz" "Diogo" "Dionísio" "Domingos" "Duda" "Dudu" "Edgar" "Edmundo" "Eduardo" "Elias" "Eliezer" "Emanuel" "Emilio" "Enéas" "Enzo" "Erasmo" "Érico" "Ernesto" "Estevão" "Eugênio" "Evaristo" "Ezequiel" "Fabiano" "Fábio" "Fabricio" "Felipe" "Félix" "Fernando" "Filipe" "Flávio" "Florencio" "Francisco" "Frederico" "Gabriel" "Gaspar" "Geraldo" "Gil" "Gilberto" "Gláucio" "Godofredo" "Guilherme" "Gustavo" "Hélio" "Haroldo" "Heitor" "Henrique" "Herbert" "Heriberto" "Hermínio" "Hipólito" "Horácio" "Hugo" "Iago" "Ian" "Igor" "Inácio" "Isaac" "Ismael" "Ivan" "Jacinto" "Jacó" "Jaime" "Jeremias" "Jerônimo" "João" "Joaquim" "Joel" "Jônatas" "Jorge" "José" "Josué" "Julio" "Kevin" "Kleber" "Laércio" "Lauro" "Leandro" "Leonardo" "Leonel" "Leopoldo" "Lourenço" "Lucas" "Luciano" "Lúcio" "Luís" "Manuel" "Marcelo" "Márcio" "Marcos" "Mariano" "Mário" "Mateus" "Matias" "Maurício" "Mauro" "Maximiliano" "Michael" "Miguel" "Miguelito" "Moisés" "Narciso" "Natanael" "Nelson" "Nicolau" "Nicolas" "Noé" "Norberto" "Octávio" "Odilon" "Olavo" "Oscar" "Osvaldo" "Otávio" "Paulino" "Paulo" "Pedro" "Plínio" "Quirino" "Rafael" "Raimundo" "Ramiro" "Raul" "Reinaldo" "Renato" "Ricardo" "Roberto" "Rodolfo" "Rodrigo" "Rogério" "Rolando" "Ronaldo" "Roque" "Rubens" "Ruy" "Salomão" "Samuel" "Sandro" "Santiago" "Sebastião" "Sérgio" "Severino" "Silvio" "Simão" "Sílvio" "Sócrates" "Tadeu" "Telmo" "Téo" "Teobaldo" "Teodoro" "Tiago" "Timoteo" "Tomás" "Túlio" "Ulisses" "Valentin" "Valério" "Valter" "Vicente" "Victor" "Vinícius" "Virgílio" "Vítor" "Wilson" "Xande" "Xandinho" "Xavier" "Zé" "Zeca" "Zeferino" "Zezé"

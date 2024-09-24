@@ -2,7 +2,8 @@
   "name": "Galaxar - Brasil",
   "desc": "§YLeaders:§! Marcos Silvas, Amor Paiva\n§YShips:§! Fuzileiro, Soyo\n§YFleets:§! Strike Team Falcata, Ribauldequin Extraorbital Corps\n§YColonies:§! Estepenseiro, Hélder",
   "gsm_brazil": {
-    "randomized": false,
+    "category": "Humanoid",
+    "randomized": true,
     "ship_names": {
       "generic": [
         "Poti",
@@ -415,7 +416,7 @@
       }
     },
     "character_names": {
-      "portuguese": {
+      "default": {
         "weight": 7,
         "first_names_male": [
           "Abel",
