@@ -48,7 +48,7 @@ const createTXT = async (
   fileName: string
 ) => {
   const makeL10nToken = (writer: Writer, value: any) => {
-    if (L10N.test(value)) {
+    if (value.startsWith('l10n|')) {
       const newValue = value.replace(L10N, '');
       const token = tokens
         .find(([tokenKey, tokenValue]) => tokenValue === newValue)
@@ -146,7 +146,7 @@ const createTranslation = async (objectData: any, metaData: any) => {
       if (typeof value === 'object' && value !== null) {
         result.push(...flattenObject(value, newKey));
       } else if (typeof value === 'string') {
-        if (L10N.test(value)) {
+        if (value.startsWith('l10n|')) {
           const newValue = value.replace(L10N, '');
           result.push([newKey, newValue]);
         }
