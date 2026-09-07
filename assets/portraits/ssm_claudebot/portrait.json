@@ -1,7 +1,7 @@
 {
   "name": "claudebot",
   "rig": "ssm_shared",
-  "modo": "altura",
+  "modo": "largura",
   "species_classes": [
     "MACHINE"
   ],
@@ -57,7 +57,8 @@
         "002": {
           "eyes": {
             "extra": "the two eye icons are both a simple bold hashtag shape: two parallel horizontal strokes crossed by two parallel vertical strokes, forming a grid/tic-tac-toe pattern, like a hashtag (pound) symbol, exactly one icon per eye"
-          }
+          },
+          "seed": 1716328627
         },
         "003": {
           "eyes": {
@@ -74,7 +75,8 @@
         "005": {
           "eyes": {
             "extra": "the two eye icons are both a simple bold upward-pointing chevron/peak shape, like a caret, exactly one icon per eye"
-          }
+          },
+          "seed": 3106173294
         },
         "006": {
           "eyes": {
