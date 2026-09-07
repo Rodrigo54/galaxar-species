@@ -35,6 +35,10 @@ function caminhosDeclarados(campos: CamposCompostos): string[] {
   const declarados: string[] = [];
   for (const [nomeDaSecao, secao] of Object.entries(campos as Record<string, Record<string, unknown> | undefined>)) {
     if (!secao) continue;
+    // `fixed` não é seção de DADO — cada campo dela é texto (o override do
+    // fixo da espécie), igual `template`/`extra`, nunca algo referenciado via
+    // <secao.campo>. Cobrança de cobertura não se aplica.
+    if (nomeDaSecao === 'fixed') continue;
     for (const [campo, valor] of Object.entries(secao)) {
       if (campo === 'template' || campo === 'extra') continue;
       if (valor === undefined || valor === null) continue;
@@ -111,7 +115,15 @@ export async function validarEspecie(config: PortraitConfig, slug: string, base:
 
     for (const chave of Object.keys(bloco.variantes).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))) {
       const rotulo = `${slug}/${genero}/${chave}`;
-      const campos = mesclarCampos(geracaoArt.base, bloco, bloco.variantes[chave]!);
+      const variante = bloco.variantes[chave]!;
+
+      if (variante.referenceImage !== undefined) {
+        const caminho = join(PASTA_RAIZ, variante.referenceImage);
+        const info = await stat(caminho).catch(() => undefined);
+        if (!info?.isFile()) throw new Error(`${rotulo}: referência "${variante.referenceImage}" não é um arquivo.`);
+      }
+
+      const campos = mesclarCampos(geracaoArt.base, bloco, variante);
 
       const cobertos = caminhosCobertos(campos, base);
       const descobertos = caminhosDeclarados(campos).filter((caminho) => !cobertos.has(caminho));

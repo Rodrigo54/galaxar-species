@@ -71,6 +71,46 @@ describe('validarEspecie — cobertura', () => {
     expect(await validarEspecie(config, 'default', BASE_ART)).toBe(1);
   });
 
+  test('override de fixed na base não é cobrado como campo de dado sem cobertura', async () => {
+    const config = especie({
+      base: {
+        species: { archetype: 'Robot' },
+        fixed: { expression: 'no mouth, blank faceplate' },
+        torso: { state: 'FullyCovered' },
+      },
+      male: {
+        person: { gender: 'Male' },
+        variantes: { '001': { torso: { primary_color: 'Gold' } } },
+      },
+    });
+    expect(await validarEspecie(config, 'timbot', BASE_ART)).toBe(1);
+  });
+
+  test('referenceImage de uma variante que não existe no disco é erro, nomeando a variante', async () => {
+    const config = especie({
+      base: { species: { archetype: 'Human' }, torso: { state: 'FullyCovered' } },
+      male: {
+        person: { gender: 'Male' },
+        variantes: { '001': { torso: { primary_color: 'Gold' }, referenceImage: 'nao-existe-em-lugar-nenhum.png' } },
+      },
+    });
+    await expect(validarEspecie(config, 'default', BASE_ART)).rejects.toThrow('default/male/001');
+  });
+
+  test('referenceImage de uma variante que existe no disco passa, sem afetar as demais', async () => {
+    const config = especie({
+      base: { species: { archetype: 'Human' }, torso: { state: 'FullyCovered' } },
+      male: {
+        person: { gender: 'Male' },
+        variantes: {
+          '001': { torso: { primary_color: 'Gold' }, referenceImage: 'package.json' },
+          '002': { torso: { primary_color: 'Silver' } },
+        },
+      },
+    });
+    expect(await validarEspecie(config, 'default', BASE_ART)).toBe(2);
+  });
+
   test('template literal sem cor declarada continua válido (caso ssm_astral)', async () => {
     const config = especie({
       base: {

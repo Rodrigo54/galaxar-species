@@ -254,18 +254,30 @@ async function main(): Promise<void> {
   console.log(`Variante do modelo: ${variant}.`);
 
   // Cada entrada de referenceImage é um indivíduo/conceito diferente da
-  // espécie (não ângulos do mesmo personagem) — todas são enviadas ao
-  // ComfyUI uma vez só, fora do loop de variantes, e reaproveitadas pra
-  // todas as chaves geradas nesta invocação (uma referência por gênero, não
-  // uma por variante).
-  const caminhosReferencia = bloco.referenceImage ?? [];
-  const imagensReferenciaEnviadas: string[] = [];
-  for (const [indice, caminhoRelativo] of caminhosReferencia.entries()) {
-    const caminhoReferencia = join(PASTA_RAIZ, caminhoRelativo);
-    const bytesReferencia = Buffer.from(await Bun.file(caminhoReferencia).arrayBuffer());
-    const nomeEnviado = await enviarImagemDeReferencia(bytesReferencia, `${slug}_${genero}_referencia_${indice + 1}.png`);
-    imagensReferenciaEnviadas.push(nomeEnviado);
-    console.log(`Referência ${indice + 1}/${caminhosReferencia.length} (${genero}) enviada como "${nomeEnviado}".`);
+  // espécie (não ângulos do mesmo personagem), enviada ao ComfyUI uma vez só
+  // e cacheada por caminho — várias variantes que reaproveitam a mesma
+  // referência (do gênero, ou coincidentemente o mesmo override) não
+  // reenviam o arquivo. Uma variante com `referenceImage` própria substitui
+  // INTEIRA a lista do gênero só pra ela (mesma regra de "mais específico
+  // vence" de um `template"); sem override, usa a lista do gênero.
+  const cacheReferenciaEnviada = new Map<string, string>();
+  async function resolverImagensReferencia(caminhosRelativos: string[], rotulo: string): Promise<string[]> {
+    const enviados: string[] = [];
+    for (const [indice, caminhoRelativo] of caminhosRelativos.entries()) {
+      let nomeEnviado = cacheReferenciaEnviada.get(caminhoRelativo);
+      if (!nomeEnviado) {
+        const caminhoReferencia = join(PASTA_RAIZ, caminhoRelativo);
+        const bytesReferencia = Buffer.from(await Bun.file(caminhoReferencia).arrayBuffer());
+        nomeEnviado = await enviarImagemDeReferencia(
+          bytesReferencia,
+          `${slug}_${genero}_referencia_${cacheReferenciaEnviada.size + 1}.png`
+        );
+        cacheReferenciaEnviada.set(caminhoRelativo, nomeEnviado);
+        console.log(`Referência ${indice + 1}/${caminhosRelativos.length} (${rotulo}) enviada como "${nomeEnviado}".`);
+      }
+      enviados.push(nomeEnviado);
+    }
+    return enviados;
   }
 
   for (const chave of chaves) {
@@ -273,6 +285,8 @@ async function main(): Promise<void> {
     const campos = mesclarCampos(config.geracaoArt.base, bloco, camposVariante);
     const prompts = montarPrompts(campos, BASE_ART, `${slug}/${genero}/${chave}`);
     const { seed: seedFinal, origem: origemSeed } = resolverSeed(seed, camposVariante.seed, seedDeterministica(slug, genero, chave));
+    const caminhosReferenciaVariante = camposVariante.referenceImage ? [camposVariante.referenceImage] : (bloco.referenceImage ?? []);
+    const imagensReferenciaEnviadas = await resolverImagensReferencia(caminhosReferenciaVariante, `${genero}/${chave}`);
     await gerarVariante(
       slug,
       genero,

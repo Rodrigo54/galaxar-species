@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { z } from 'zod';
 import {
   CAMPOS_POR_SECAO,
+  CHAVES_FIXAS,
   ESTADOS_TORSO,
   ETNIAS,
   FORMAS_OLHO,
@@ -53,8 +54,6 @@ const VOCABULARIOS_OBRIGATORIOS = {
   'person.ethnicity': ETNIAS,
   'person.gender': GENEROS_PESSOA,
 } as const satisfies Record<string, readonly string[]>;
-
-const CHAVES_FIXAS = ['style', 'view', 'pose', 'expression', 'negative'] as const;
 
 const zTemplateValido = z.string().superRefine((texto, ctx) => {
   const erro = validarSintaxeDeTemplate(texto);

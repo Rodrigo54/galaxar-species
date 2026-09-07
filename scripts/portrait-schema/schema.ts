@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { CAMPOS_EYES, CAMPOS_HAIR, CAMPOS_PERSON, CAMPOS_SPECIES, CAMPOS_TORSO } from './campos';
 import { validarSintaxeDeTemplate } from './templates';
-import { ANCORAS_VERTICAIS, MODOS_ENQUADRAMENTO, RIGS_VALIDOS } from './vocabulario';
+import { ANCORAS_VERTICAIS, CHAVES_FIXAS, MODOS_ENQUADRAMENTO, RIGS_VALIDOS } from './vocabulario';
 import { CATEGORIAS_VALIDAS, CATEGORIA_DA_CLASSE, SPECIES_CLASSES_VALIDAS, type CategoriaId, type SpeciesClassId } from '../shared/stellaris';
 
 const GENEROS_ALVO = ['male', 'female', 'genderless'] as const;
@@ -99,13 +99,28 @@ const zCamposDoIndividuo = z
     'Atributos do indivíduo — usados em "base", no bloco de gênero e em cada variante, sempre como overrides parciais mesclados por seção (nunca o objeto inteiro substituído).'
   );
 
-/** `base` é o único nível que aceita `species`: gênero e variante descrevem
- * indivíduos, e a espécie é a mesma pros dois. Declarar `species` fora daqui
- * é erro de `.strict()`, com a chave nomeada. */
+/** Substitui, só para esta espécie, um dos textos fixos e globais de
+ * `scripts/generate-art/base.json` (`fixed.style`/`view`/`pose`/`expression`/
+ * `negative`, compartilhados por padrão entre todas as espécies). Mesma
+ * sintaxe de interpolação de um `template` de seção, e o mesmo comportamento
+ * de "nível mais específico vence" (texto INTEIRO substituído, não
+ * concatenado como `extra`) — faz sentido pra uma espécie cujo corpo não
+ * cabe no `fixed.expression` genérico (ex.: um robô sem boca, onde "lips
+ * fully closed" não se aplica). Só existe em `geracaoArt.base`: um traço
+ * fixo vale pra espécie inteira, igual `species`. Chave ausente aqui = usa o
+ * texto global de `base.json`, igual toda espécie que não declara `fixed`. */
+const zFixo = z.object(Object.fromEntries(CHAVES_FIXAS.map((chave) => [chave, zTemplateDaSecao]))).strict();
+
+/** `base` é o único nível que aceita `species`/`fixed`: gênero e variante
+ * descrevem indivíduos, e a espécie (e os textos fixos que ela sobrescreve)
+ * são os mesmos pros dois. Declarar `species`/`fixed` fora daqui é erro de
+ * `.strict()`, com a chave nomeada. */
 const zCamposCompostos = zCamposDoIndividuo
-  .extend({ species: zSpecies.optional() })
+  .extend({ species: zSpecies.optional(), fixed: zFixo.optional() })
   .strict()
-  .describe('Atributos da espécie (species) mais os do indivíduo — forma do bloco "base" e do objeto mesclado que alimenta o prompt.');
+  .describe(
+    'Atributos da espécie (species) mais os do indivíduo, mais overrides de texto fixo (fixed) — forma do bloco "base" e do objeto mesclado que alimenta o prompt.'
+  );
 
 const CHAVE_VARIANTE = /^\d{3}$/;
 
@@ -202,6 +217,12 @@ const zVariante = zCamposDoIndividuo
       .describe(
         'Seed de geração desta variante (noise_seed do ComfyUI) — a seed da imagem em disco, gravada automaticamente por qualquer forma de "bun run art --seed" (um inteiro fixa aquele valor; sem valor sorteia um) ou colada à mão. Fixa a imagem: reexecuções sem --seed reproduzem esta seed. Ausente = usa a seed determinística; "--seed default" apaga esta chave e devolve a variante a ela.'
       ),
+    referenceImage: z
+      .string()
+      .optional()
+      .describe(
+        'Override da referência visual só desta variante — substitui INTEIRA (não concatena) a lista de geracaoArt.<gênero>.referenceImage para esta chave, quando a referência do gênero puxa o resultado pra um lado que essa variante especificamente não deve seguir (ex.: um formato de olho/visor que a referência do gênero fixa e o texto sozinho não consegue vencer). Uma imagem só, ao contrário da lista do gênero — se precisar de mais de uma, o override não serve, revise a referência do gênero em vez disso. Ausente = usa a lista do gênero normalmente.'
+      ),
   })
   .strict();
 
@@ -212,7 +233,7 @@ function zBlocoGenero() {
         .array(z.string())
         .optional()
         .describe(
-          'Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Uma lista só por gênero, sem override por variante. Ausente/vazio = txt2img puro, sem referência.'
+          'Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Lista só existe neste nível (gênero); uma variante pode sobrescrevê-la inteira com uma imagem só via variantes.<chave>.referenceImage. Ausente/vazio = txt2img puro, sem referência.'
         ),
       variantes: z
         .record(z.string().regex(CHAVE_VARIANTE), zVariante)
