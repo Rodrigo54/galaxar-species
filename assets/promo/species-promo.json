@@ -131,6 +131,17 @@
       "genderless/003"
     ]
   },
+  "ssm_claudebot": {
+    "titulo": "Claudebot",
+    "subtitulo": "A Face That Only Shows Symbols",
+    "lore": "Terracotta-shelled companions whose whole face is a single screen, one bold symbol standing in for whatever words would only get in the way. No two of them wear quite the same expression twice, and none has ever needed a mouth to be understood.",
+    "fundo": "002",
+    "variantes": [
+      "genderless/001",
+      "genderless/006",
+      "genderless/015"
+    ]
+  },
   "ssm_avians": {
     "titulo": "Shaw's Birds",
     "subtitulo": "Raptors Bred for Altitude",
