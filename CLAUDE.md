@@ -282,6 +282,14 @@ depois do próximo push. O texto da listagem no Steam Workshop fica em `steam-wo
 `steam-workshop/change-notes.md`; o `remote_file_id` do `descriptor.mod` é o ID do item no Steam Workshop usado
 para publicação.
 
+Versionamento segue semver de verdade, só adaptado a conteúdo em vez de software: uma espécie/portrait nova conta
+como **feature** e leva bump de **minor** (`1.14.0` → `1.15.0`), mesmo quando é só arte adicionada, sem mudança de
+comportamento nenhuma. Uma correção — bug, ajuste técnico, qualquer coisa que não adiciona conteúdo novo pro
+jogador escolher — é **patch** (`1.14.0` → `1.14.1`), **mesmo que o bug corrigido afetasse a experiência do
+jogador**: "afeta a experiência" não é o critério pra minor, "adiciona conteúdo novo" é. O fix da classe `ROBOT`
+(retrato não aparecendo na Ascensão Sintética) é o exemplo do erro contrário: saiu como `1.15.0` quando deveria
+ter sido `1.14.1`, por aplicar o critério errado (ver `docs/history/2026-09-06-ascensao-sintetica-classe-robot.md`).
+
 ## Fluxo de release
 
 Sem PR/aprovação no GitHub — este repositório é um pipeline de conteúdo de um mod solo, não um projeto com
