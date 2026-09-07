@@ -11,6 +11,15 @@ export const FORMAS_CORPO = [
   'Slim', 'Athletic', 'Average', 'Curvy', 'Chubby', 'Hourglass', 'Muscular',
 ] as const;
 
+/** As cinco chaves de `fixed` em `scripts/generate-art/base.json` — texto
+ * global compartilhado por toda espécie (estilo/enquadramento/pose/expressão/
+ * negativo). Compartilhada entre `schema.ts` (aqui, pra aceitar um override
+ * por espécie em `geracaoArt.base.fixed`) e `generate-art/base.ts` (schema do
+ * próprio `base.json`) — uma lista só, já que `portrait-schema` não pode
+ * importar de `generate-art` (a dependência vai no sentido contrário) e as
+ * duas listas precisam nomear exatamente as mesmas chaves. */
+export const CHAVES_FIXAS = ['style', 'view', 'pose', 'expression', 'negative'] as const;
+
 /** Descrição em português por valor — usada por `gerar-json-schema.ts` pra
  * injetar `enumDescriptions` no JSON Schema gerado, reconhecido pelo
  * language service de JSON do VS Code (mesmo mecanismo do enum de
@@ -89,7 +98,7 @@ export const ESTILOS_CABELO_DESCRICOES: Record<(typeof ESTILOS_CABELO)[number], 
 export const CORES = [
   'Black', 'Brown', 'Blonde', 'Red', 'White', 'Gray', 'Blue', 'Green', 'Pink', 'Purple', 'Orange',
   'Yellow', 'Teal', 'Cyan', 'Magenta', 'Maroon', 'Turquoise', 'Lavender', 'Beige', 'Gold', 'Silver',
-  'Bronze', 'Copper', 'Indigo', 'Violet', 'Lilac', 'Burgundy', 'Olive', 'Peach', 'Coral', 'Mint', 'Azure',
+  'Bronze', 'Copper', 'Indigo', 'Violet', 'Lilac', 'Burgundy', 'Olive', 'Peach', 'Coral', 'Terracotta', 'Mint', 'Azure',
   'Amber', 'Charcoal', 'Navy', 'Sky Blue', 'Lime', 'Mustard', 'Rose', 'Periwinkle', 'Salmon', 'Emerald',
   'Sapphire', 'Ruby', 'Platinum', 'Amethyst', 'Pearl',
 ] as const;

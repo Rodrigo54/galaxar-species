@@ -2,7 +2,7 @@
 
 Sagittarius Species é o pacote de retratos para quem sempre quis que o próprio império parecesse ter saído de um corredor de convenção, de um livro de RPG e de uma maratona de ficção científica de madrugada — tudo ao mesmo tempo. Arte assistida por IA, um rig animado compartilhado e uma desculpa legítima pra encher a galáxia de gente que você realmente quer encontrar na tela de diplomacia.
 
-**18 espécies · 587 retratos · um rig animado compartilhado · atualizado para o Stellaris 4.5**
+## **20 espécies · 641 retratos · um rig animado compartilhado · atualizado para o Stellaris 4.5**
 
 Cada espécie aparece na aba correspondente do editor de império, e o mod ainda registra uma aba própria, Sagittarius.
 
@@ -10,13 +10,15 @@ Cada espécie aparece na aba correspondente do editor de império, e o mod ainda
 
 - 🌍 **Humans (augmented realism)** — 50 retratos (25 masculinos / 25 femininos)\
   Colonos de uma velha esfera azul que trocaram a paciência da evolução por implantes discretos e trajes pressurizados. Onde chegam, medem, mapeiam e ficam: a expansão neles é menos conquista do que hábito.
+- 🕊️ **UN Humans** — 50 retratos (25 masculinos / 25 femininos)\
+  Corpo de paz unificado da Terra, mobilizado tanto pra mediar quanto pra lutar. Carregam poder de fogo suficiente pra impor o cessar-fogo que estão propondo, e paciência suficiente pra esperar alguém aceitar.
 - 🧝 **Space Elves** — 50 retratos (25 masculinos / 25 femininos)\
   Casas longevas que abandonaram a floresta pelo casco de nave e passaram a contar a história em séculos, não em gerações. Voam em trajes claros ajustados ao corpo e tratam cada rota nova como um verso que ainda vai ser decorado.
 - 👑 **High Elves** — 50 retratos (25 masculinos / 25 femininos)\
   Nobreza que reveste a própria pele em ouro trabalhado e carrega gemas onde ficam gravadas as linhagens inteiras de quem as usa. Governam por protocolo e memória, convencidos de que todo erro cometido hoje já foi cometido e corrigido há mil anos.
 - ✨ **Astral Humans** — 50 retratos (25 masculinos / 25 femininos)\
   Mentes que abriram uma fenda no véu e voltaram com os olhos acesos em violeta e sigilos ardendo por baixo da armadura. Enxergam a rota antes de calculá-la, e por isso quase nunca explicam a decisão que acabaram de tomar.
-- 🏛️ **New Vargrosians** — 41 retratos (25 masculinos / 16 femininos)\
+- 🏛️ **New Vargrosians** — 30 retratos (15 masculinos / 15 femininos)\
   Povo de pele acinzentada e mantos pesados, herdeiro de uma cultura tão antiga que a própria arquitetura já é ruína em três mundos. Falam pouco, registram tudo, e julgam um império inteiro pelo cuidado que ele tem com o que já passou.
 - ⚔️ **Star Knight** — 40 retratos (21 masculinos / 19 femininos)\
   Ordem juramentada, de armadura prateada e azul, treinada para atravessar o vácuo como quem atravessa o corredor de um mosteiro. Cada cavaleiro responde por um trecho de espaço e o defende sem esperar reforço, ordem ou recompensa.
@@ -33,6 +35,8 @@ Cada espécie aparece na aba correspondente do editor de império, e o mod ainda
   Colossos blindados com um núcleo incandescente cravado no peito, fabricados em série para uma campanha que gastava unidades mais rápido do que a linha de montagem entregava. Continuam formando fileira muito depois de a guerra ter acabado.
 - 🦾 **Cyborgs** — 12 retratos (sem gênero)\
   Guerreiros de placa vermelha e visor aceso, um pouco mais máquina a cada campanha porque foi exatamente assim que sobreviveram à anterior. Encaram o corpo com que nasceram como um primeiro rascunho, nunca como versão final.
+- 📟 **Claudebot** — 15 retratos (sem gênero)\
+  Companheiros de casco terracota cujo rosto inteiro é uma única tela: um símbolo em negrito no lugar de qualquer palavra que só atrapalharia. Nenhum deles usa a mesma expressão duas vezes, e nenhum jamais precisou de boca pra ser entendido.
 
 ## 🐦 Avians
 

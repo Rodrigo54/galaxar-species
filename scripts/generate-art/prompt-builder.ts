@@ -8,7 +8,10 @@ import type { BaseArt } from './base';
  * ou reescrever uma frase é editar JSON, não TypeScript.
  *
  * Uma entrada de `order` é resolvida por forma:
- * - `fixed.<chave>` — texto fixo, usado como está.
+ * - `fixed.<chave>` — texto fixo e global de `base.json`, ou o override da
+ *   espécie em `geracaoArt.base.fixed.<chave>` (`portrait.json`) quando
+ *   houver — mesmo motor de interpolação dos demais fragmentos, texto INTEIRO
+ *   substituído, não concatenado.
  * - `<secao>.template` — template da espécie (`portrait.json`) ou, na falta
  *   dele, o default de `base.json`, passado pelo motor de interpolação.
  * - `<secao>.extra` — texto adicional daquela seção, também interpolado.
@@ -38,7 +41,12 @@ function secaoDe(campos: CamposCompostos, nome: string): Record<string, unknown>
 function resolverFragmento(entrada: string, campos: CamposCompostos, base: BaseArt, lado: Lado, rotulo: string): string | undefined {
   const [prefixo, sufixo] = entrada.split('.') as [string, string];
 
-  if (prefixo === 'fixed') return base.fixed[sufixo as keyof BaseArt['fixed']];
+  if (prefixo === 'fixed') {
+    const chave = sufixo as keyof BaseArt['fixed'];
+    const override = (campos.fixed as Record<string, string | undefined> | undefined)?.[chave];
+    const texto = override ?? base.fixed[chave];
+    return interpolar(texto, campos as CamposParaInterpolacao, base.vocabulary, `${rotulo} (${entrada})`);
+  }
 
   const secao = secaoDe(campos, prefixo);
   if (!secao) return undefined;

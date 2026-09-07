@@ -2,7 +2,7 @@
 
 Sagittarius Species is the portrait pack for anyone who's ever wanted their own empire to look like it walked straight out of a con hall, a tabletop splatbook, and a late-night sci-fi marathon — all at once. AI-assisted art, a shared animated rig, and a genuine excuse to fill the galaxy with people you actually want to run into on the diplomacy screen.
 
-**19 species · 626 portraits · one shared animated rig · updated for Stellaris 4.5**
+## **20 species · 641 portraits · one shared animated rig · updated for Stellaris 4.5**
 
 Every species shows up under its matching tab in the empire creator, and the mod registers a tab of its own, Sagittarius.
 
@@ -35,6 +35,8 @@ Every species shows up under its matching tab in the empire creator, and the mod
   Armored colossi with an incandescent core driven into the chest, mass-produced for a campaign that burned through units faster than the assembly line could deliver them. They still fall into formation long after the war ended.
 - 🦾 **Cyborgs** — 12 portraits (genderless)\
   Warriors in red plate with lit visors, a little more machine after every campaign because that is exactly how they survived the last one. They regard the body they were born with as a first draft, never the final version.
+- 📟 **Claudebot** — 15 portraits (genderless)\
+  Terracotta-shelled companions whose whole face is a single screen, one bold symbol standing in for whatever words would only get in the way. No two of them wear quite the same expression twice, and none has ever needed a mouth to be understood.
 
 ## 🐦 Avians
 

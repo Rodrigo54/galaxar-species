@@ -14,8 +14,10 @@ import type { CamposCompostos } from '../portrait-schema';
  * Opera só em cima de `CamposCompostos`, agnóstico de motor de geração. */
 
 /** Nome de toda seção possível — derivado do tipo, então uma seção nova no
- * schema quebra a build aqui até ser considerada. */
-const SECOES = ['species', 'person', 'hair', 'eyes', 'torso'] as const satisfies readonly (keyof CamposCompostos)[];
+ * schema quebra a build aqui até ser considerada. `fixed` entra pela mesma
+ * regra de `species`: só a `base` declara, gênero/variante nunca têm a
+ * chave, então o merge é sempre "o override da espécie, se houver". */
+const SECOES = ['species', 'fixed', 'person', 'hair', 'eyes', 'torso'] as const satisfies readonly (keyof CamposCompostos)[];
 
 type Secao = Record<string, unknown>;
 

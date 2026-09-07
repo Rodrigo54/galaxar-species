@@ -62,6 +62,15 @@ describe('mesclarCampos', () => {
     expect(resultado.species).toEqual({ archetype: 'Mermaid', template: 'aquatic humanoid' });
   });
 
+  test('fixed vem da base e atravessa o merge intacto (só a base pode declará-lo)', () => {
+    const resultado = mesclarCampos(
+      { fixed: { expression: 'sem boca' } },
+      { person: { gender: 'Male' } },
+      { hair: { primary_color: 'Blonde' } }
+    );
+    expect(resultado.fixed).toEqual({ expression: 'sem boca' });
+  });
+
   test('caso ssm_mermaids: template na base, cores na variante — o merge junta os dois níveis', () => {
     const resultado = mesclarCampos(
       { torso: { state: 'CroppedSleeved', template: 'fish-scale top in <torso.primary_color>' } },

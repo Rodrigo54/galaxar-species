@@ -1,0 +1,141 @@
+{
+  "name": "claudebot",
+  "rig": "ssm_shared",
+  "modo": "largura",
+  "species_classes": [
+    "MACHINE"
+  ],
+  "categories": [
+    "machines",
+    "synthetics",
+    "cybernetics"
+  ],
+  "counts": {
+    "genderless": 15
+  },
+  "geracaoArt": {
+    "base": {
+      "species": {
+        "archetype": "Robot",
+        "template": "<species.archetype>, cute humanoid mascot companion robot, injection-molded plastic construction, matte plastic shell with a light satin sheen, sleek streamlined proportions, oversized head on a slim articulated body",
+        "extra": "fully mechanical machine, smooth hard faceplate instead of a human face, (a distinctly elliptical head, clearly taller than it is wide, narrowing gradually from a broad crown down to a narrower jawline, a single continuous machined head shape that is part of the body, not a separate helmet, not a sphere:1.2), (a short thin antenna rod tipped with a small round bead, mounted on each side of the head at ear height in place of ears, one on the left and one on the right, symmetric, small and simple:1.2), molded plastic surfaces throughout, visible panel seams and parting lines, matte plastic finish, no bare metal, no chrome, smooth head silhouette apart from the two side antennas, nothing protruding from the top of the head, no horns"
+      },
+      "fixed": {
+        "expression": "calm neutral demeanor, steady direct gaze toward the camera, approachable and attentive posture"
+      },
+      "person": {
+        "extra": "(the head shell is molded in solid <torso.primary_color> plastic, the exact same color as the body:1.2)"
+      },
+      "eyes": {
+        "primary_color": "White",
+        "template": "(a wide horizontal rectangular OLED display screen recessed into the center of the face, with softly rounded corners, showing the eyes as two simple extremely bold black icon-style graphic symbols on a backlit light gray screen, clean flat vector iconography, very thick uniform stroke weight throughout, both icons rendered at the exact same size and scale as each other, matched consistent proportions, crisp sharp edges, no other symbols visible on the screen:1.4), digital display panel, flat white screen faceplate, (the lower half of the face below the screen mirrors the panel above it exactly: the same seamless polished white surface, zero surface detail anywhere on it:1.5)"
+      },
+      "torso": {
+        "state": "FullyCovered",
+        "primary_color": "Terracotta",
+        "template": "sealed robotic chassis of (matte molded plastic in bold saturated <torso.primary_color>:1.4), curved plastic shell panels over chest and abdomen with visible seam lines, glowing <eyes.primary_color> light strips and small indicator lights, silver articulated shoulder and elbow joints, ribbed accordion bellows at the neck and waist, arms and body molded in that same solid plastic color",
+        "extra": "(visible silver mechanical joint housings and small silver hex bolts along the panel seams, articulated silver servo-driven shoulder and elbow assemblies, functional industrial robotics detailing rather than a soft rounded toy look:1.2)"
+      }
+    },
+    "modelo": {
+      "variant": "distilled",
+      "steps": 4,
+      "cfg": 1,
+      "aspectRatio": "2:3"
+    },
+    "genderless": {
+      "referenceImage": [
+        "assets/portraits/ssm_claudebot/reference/reference_01.png"
+      ],
+      "variantes": {
+        "001": {
+          "eyes": {
+            "extra": "the left eye icon is a simple bold chevron shape pointing right, like a greater-than sign, the right eye icon is a simple bold chevron shape pointing left, like a less-than sign, deliberately different shapes from each other, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_001_chevron.png"
+        },
+        "002": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold hashtag shape: two parallel horizontal strokes crossed by two parallel vertical strokes, forming a grid/tic-tac-toe pattern, like a hashtag (pound) symbol, exactly one icon per eye"
+          },
+          "seed": 1716328627
+        },
+        "003": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold heart outline shape, a hollow heart with a plain white center, not filled in, like a heart symbol, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_003_heart.png",
+          "seed": 3866050256
+        },
+        "004": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold short horizontal bar shape, like a hyphen, exactly one icon per eye"
+          }
+        },
+        "005": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold upward-pointing chevron/peak shape, like a caret, exactly one icon per eye"
+          },
+          "seed": 3106173294
+        },
+        "006": {
+          "eyes": {
+            "extra": "(a single icon on the screen: two short parallel diagonal dash strokes side by side near the top, with one curved swooping stroke beneath them like a checkmark or a small smile, together resembling the katakana character tsu, ツ:1.3)"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_006_tsu.png",
+          "seed": 629957084
+        },
+        "007": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold star burst shape with short radiating strokes, like an asterisk, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_007_asterisk.png",
+          "seed": 2023659858
+        },
+        "008": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold plus-cross shape, one vertical and one horizontal stroke crossing, like a plus sign, exactly one icon per eye"
+          }
+        },
+        "009": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold upward-curving smile-arc shape, like a lowercase letter u, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_009_u.png",
+          "seed": 2020343492
+        },
+        "010": {
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_010_n.png"
+        },
+        "011": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold ring outline shape, like a capital letter O, exactly one icon per eye"
+          }
+        },
+        "012": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold vertical bar shape with a wavy S-curve overlaid across it, like a dollar sign, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_012_dollar.png"
+        },
+        "013": {
+          "eyes": {
+            "extra": "(a single simple friendly face icon on the screen: two small solid black round dot eyes, a short curved line beneath each eye like a lower eyelid crease, one small curved hook-shaped nose stroke centered between and below the eyes, and one small curved smile-line mouth beneath the nose:1.3)"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_013_face.png",
+          "seed": 4247404734
+        },
+        "014": {
+          "eyes": {
+            "extra": "the two eye icons are both a simple bold musical note shape: a solid filled oval notehead with a straight vertical stem extending up from it and a small curved flag at the top of the stem, like an eighth note symbol, exactly one icon per eye"
+          },
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_014_note.png",
+          "seed": 3824920896
+        },
+        "015": {
+          "referenceImage": "assets/portraits/ssm_claudebot/reference/reference_015_sideeye.png"
+        }
+      }
+    }
+  }
+}

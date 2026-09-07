@@ -7,6 +7,10 @@ For the steam workshop change notes I recommended to use major mod version incre
 > publish time if it isn't there yet (that stamp is local bookkeeping only — it never gets sent
 > to Steam, which already timestamps updates on its own).
 
+## 1.16.0 — 2026-09-07 18:46
+
+* **New species: Claudebot** — 15 portraits (genderless), terracotta-shelled companions whose whole face is a single OLED screen: one bold symbol standing in for a mouth — a heart, a musical note, a hashtag, a sideways glance, never twice the same. That brings the pack to 20 species.
+
 ## 1.15.0 — 2026-09-06 23:07
 
 * Fixed mechanical species portraits (Timbot, Cyborg, Green Order, New Order) not being offered as options after Synthetic Ascension.

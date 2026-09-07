@@ -318,6 +318,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -371,6 +372,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -476,6 +478,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -564,6 +567,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -617,6 +621,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -697,10 +702,36 @@
               ],
               "additionalProperties": false,
               "description": "O que esta ESPÉCIE é — arquétipo visual e o texto que a diferencia das outras que compartilham o mesmo arquétipo. Só pode ser declarada em geracaoArt.base: descreve a espécie inteira, não o indivíduo (o que varia por indivíduo é person/hair/eyes/torso)."
+            },
+            "fixed": {
+              "type": "object",
+              "properties": {
+                "style": {
+                  "description": "Texto desta seção no prompt, na sintaxe de interpolação: \"<secao.campo>\" injeta o valor do campo (o do objeto já mesclado base→gênero→variante), \"[trecho]\" marca um trecho opcional, que some inteiro se o campo dentro dele não estiver declarado. Fora de colchetes o campo é OBRIGATÓRIO — não declarar é erro, não um prompt silenciosamente incompleto. Omitido = usa o template default de scripts/generate-art/base.json.",
+                  "type": "string"
+                },
+                "view": {
+                  "description": "Texto desta seção no prompt, na sintaxe de interpolação: \"<secao.campo>\" injeta o valor do campo (o do objeto já mesclado base→gênero→variante), \"[trecho]\" marca um trecho opcional, que some inteiro se o campo dentro dele não estiver declarado. Fora de colchetes o campo é OBRIGATÓRIO — não declarar é erro, não um prompt silenciosamente incompleto. Omitido = usa o template default de scripts/generate-art/base.json.",
+                  "type": "string"
+                },
+                "pose": {
+                  "description": "Texto desta seção no prompt, na sintaxe de interpolação: \"<secao.campo>\" injeta o valor do campo (o do objeto já mesclado base→gênero→variante), \"[trecho]\" marca um trecho opcional, que some inteiro se o campo dentro dele não estiver declarado. Fora de colchetes o campo é OBRIGATÓRIO — não declarar é erro, não um prompt silenciosamente incompleto. Omitido = usa o template default de scripts/generate-art/base.json.",
+                  "type": "string"
+                },
+                "expression": {
+                  "description": "Texto desta seção no prompt, na sintaxe de interpolação: \"<secao.campo>\" injeta o valor do campo (o do objeto já mesclado base→gênero→variante), \"[trecho]\" marca um trecho opcional, que some inteiro se o campo dentro dele não estiver declarado. Fora de colchetes o campo é OBRIGATÓRIO — não declarar é erro, não um prompt silenciosamente incompleto. Omitido = usa o template default de scripts/generate-art/base.json.",
+                  "type": "string"
+                },
+                "negative": {
+                  "description": "Texto desta seção no prompt, na sintaxe de interpolação: \"<secao.campo>\" injeta o valor do campo (o do objeto já mesclado base→gênero→variante), \"[trecho]\" marca um trecho opcional, que some inteiro se o campo dentro dele não estiver declarado. Fora de colchetes o campo é OBRIGATÓRIO — não declarar é erro, não um prompt silenciosamente incompleto. Omitido = usa o template default de scripts/generate-art/base.json.",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
             }
           },
           "additionalProperties": false,
-          "description": "Atributos da espécie (species) mais os do indivíduo — forma do bloco \"base\" e do objeto mesclado que alimenta o prompt."
+          "description": "Atributos da espécie (species) mais os do indivíduo, mais overrides de texto fixo (fixed) — forma do bloco \"base\" e do objeto mesclado que alimenta o prompt."
         },
         "modelo": {
           "type": "object",
@@ -883,6 +914,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -936,6 +968,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -1041,6 +1074,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -1129,6 +1163,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -1182,6 +1217,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -1214,7 +1250,7 @@
               "description": "O que está sobre o tronco do indivíduo — armadura, escama, pele nua, pelagem, roupa comum, o que fizer sentido pra espécie. O template é onde cada cor é posicionada na peça certa (\"...top in <torso.primary_color>, ...waistband in <torso.secondary_color>\"), em vez de as cores saírem soltas e a IA decidir onde aplicá-las."
             },
             "referenceImage": {
-              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Uma lista só por gênero, sem override por variante. Ausente/vazio = txt2img puro, sem referência.",
+              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Lista só existe neste nível (gênero); uma variante pode sobrescrevê-la inteira com uma imagem só via variantes.<chave>.referenceImage. Ausente/vazio = txt2img puro, sem referência.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -1376,6 +1412,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -1429,6 +1466,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -1534,6 +1572,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -1622,6 +1661,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -1675,6 +1715,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -1711,6 +1752,10 @@
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 9007199254740991
+                  },
+                  "referenceImage": {
+                    "description": "Override da referência visual só desta variante — substitui INTEIRA (não concatena) a lista de geracaoArt.<gênero>.referenceImage para esta chave, quando a referência do gênero puxa o resultado pra um lado que essa variante especificamente não deve seguir (ex.: um formato de olho/visor que a referência do gênero fixa e o texto sozinho não consegue vencer). Uma imagem só, ao contrário da lista do gênero — se precisar de mais de uma, o override não serve, revise a referência do gênero em vez disso. Ausente = usa a lista do gênero normalmente.",
+                    "type": "string"
                   }
                 },
                 "additionalProperties": false
@@ -1874,6 +1919,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -1927,6 +1973,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -2032,6 +2079,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -2120,6 +2168,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -2173,6 +2222,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -2205,7 +2255,7 @@
               "description": "O que está sobre o tronco do indivíduo — armadura, escama, pele nua, pelagem, roupa comum, o que fizer sentido pra espécie. O template é onde cada cor é posicionada na peça certa (\"...top in <torso.primary_color>, ...waistband in <torso.secondary_color>\"), em vez de as cores saírem soltas e a IA decidir onde aplicá-las."
             },
             "referenceImage": {
-              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Uma lista só por gênero, sem override por variante. Ausente/vazio = txt2img puro, sem referência.",
+              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Lista só existe neste nível (gênero); uma variante pode sobrescrevê-la inteira com uma imagem só via variantes.<chave>.referenceImage. Ausente/vazio = txt2img puro, sem referência.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -2367,6 +2417,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -2420,6 +2471,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -2525,6 +2577,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -2613,6 +2666,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -2666,6 +2720,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -2702,6 +2757,10 @@
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 9007199254740991
+                  },
+                  "referenceImage": {
+                    "description": "Override da referência visual só desta variante — substitui INTEIRA (não concatena) a lista de geracaoArt.<gênero>.referenceImage para esta chave, quando a referência do gênero puxa o resultado pra um lado que essa variante especificamente não deve seguir (ex.: um formato de olho/visor que a referência do gênero fixa e o texto sozinho não consegue vencer). Uma imagem só, ao contrário da lista do gênero — se precisar de mais de uma, o override não serve, revise a referência do gênero em vez disso. Ausente = usa a lista do gênero normalmente.",
+                    "type": "string"
                   }
                 },
                 "additionalProperties": false
@@ -2865,6 +2924,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -2918,6 +2978,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -3023,6 +3084,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -3111,6 +3173,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -3164,6 +3227,7 @@
                     "Olive",
                     "Peach",
                     "Coral",
+                    "Terracotta",
                     "Mint",
                     "Azure",
                     "Amber",
@@ -3196,7 +3260,7 @@
               "description": "O que está sobre o tronco do indivíduo — armadura, escama, pele nua, pelagem, roupa comum, o que fizer sentido pra espécie. O template é onde cada cor é posicionada na peça certa (\"...top in <torso.primary_color>, ...waistband in <torso.secondary_color>\"), em vez de as cores saírem soltas e a IA decidir onde aplicá-las."
             },
             "referenceImage": {
-              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Uma lista só por gênero, sem override por variante. Ausente/vazio = txt2img puro, sem referência.",
+              "description": "Imagens de referência (conceito visual, ex.: gerado no Midjourney) deste gênero — cada entrada é um indivíduo/conceito diferente da espécie (não ângulos do mesmo personagem), encadeadas via ReferenceLatent pra dar amplitude visual ao resultado. Lista só existe neste nível (gênero); uma variante pode sobrescrevê-la inteira com uma imagem só via variantes.<chave>.referenceImage. Ausente/vazio = txt2img puro, sem referência.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -3358,6 +3422,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -3411,6 +3476,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -3516,6 +3582,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -3604,6 +3671,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -3657,6 +3725,7 @@
                           "Olive",
                           "Peach",
                           "Coral",
+                          "Terracotta",
                           "Mint",
                           "Azure",
                           "Amber",
@@ -3693,6 +3762,10 @@
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 9007199254740991
+                  },
+                  "referenceImage": {
+                    "description": "Override da referência visual só desta variante — substitui INTEIRA (não concatena) a lista de geracaoArt.<gênero>.referenceImage para esta chave, quando a referência do gênero puxa o resultado pra um lado que essa variante especificamente não deve seguir (ex.: um formato de olho/visor que a referência do gênero fixa e o texto sozinho não consegue vencer). Uma imagem só, ao contrário da lista do gênero — se precisar de mais de uma, o override não serve, revise a referência do gênero em vez disso. Ausente = usa a lista do gênero normalmente.",
+                    "type": "string"
                   }
                 },
                 "additionalProperties": false

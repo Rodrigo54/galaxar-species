@@ -97,6 +97,7 @@ ssm_infernals = {
 ssm_machine = {
   species_class = MACHINE
   portraits = {
+    "ssm_claudebot"
     "ssm_cyborg"
     "ssm_green_order"
     "ssm_new_order"
@@ -160,6 +161,7 @@ ssm_reptilians = {
 ssm_robots = {
   species_class = ROBOT
   portraits = {
+    "ssm_claudebot"
     "ssm_cyborg"
     "ssm_green_order"
     "ssm_new_order"

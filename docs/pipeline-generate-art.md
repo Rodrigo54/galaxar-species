@@ -91,13 +91,20 @@ posicionais escritos depois da flag.
   já vale pra texto (`docs/history/2026-08-08-generate-art-schema-proprio.md`), só que aplicada a imagem: ao
   declarar mais de uma referência por gênero, a ordem é decisão de peso relativo, não uma lista arbitrária —
   coloque a referência que deve dominar em primeiro lugar.
-- **`geracaoArt` no `portrait.json`**: `base` (`species` — só aqui, ver abaixo —, `torso`, `eyes`/`hair`/`person`
+- **`geracaoArt` no `portrait.json`**: `base` (`species` e `fixed` — só aqui, ver abaixo —, `torso`, `eyes`/`hair`/`person`
   quando fixos pra toda espécie), `modelo` (`variant`: `"distilled"` (padrão) ou `"base"`;
   `steps`/`cfg`/`aspectRatio` — sem checkpoint/LoRA/sampler, ver `scripts/portrait-schema/schema.ts`),
   `male`/`female`/`genderless` (`referenceImage`
   como **lista** de imagens de referência/conceito por gênero + `variantes` nomeadas `"001"`..`"NNN"`, uma por
   indivíduo, contagem batendo exato com `counts.<gênero>` — conferido pelo schema via `.superRefine`). Cada
-  variante aceita ainda um `seed` opcional (`noise_seed` do ComfyUI): a seed **da imagem que está em disco**
+  variante aceita ainda um `referenceImage` próprio — uma **imagem só** (não lista), que substitui INTEIRA a
+  lista do gênero só pra aquela variante, pro caso em que a referência do gênero puxa o resultado (ex.: formato
+  de olho/visor) pra um lado que aquela variante especificamente não deve seguir e o texto sozinho não consegue
+  vencer. `generate-art/index.ts` resolve isso por variante, dentro do loop de geração (não mais fora dele como
+  antes de existir override): cada imagem enviada ao ComfyUI é cacheada por caminho, então variantes que
+  reaproveitam a mesma referência (a do gênero, ou coincidentemente o mesmo override) não reenviam o arquivo
+  duas vezes. Cada variante aceita ainda um `seed` opcional (`noise_seed` do ComfyUI): a seed **da imagem que
+  está em disco**
   naquela variante, gravada automaticamente por `--seed` (ver abaixo) ou colada à mão. Gravar é fixar — dali em
   diante, toda execução sem `--seed` reproduz aquela imagem. Precedência de **leitura** em `generate-art/index.ts`
   (`resolverSeed`, `generate-art/seed.ts`): `--seed` da CLI → `seed` da variante no `portrait.json` → seed
@@ -171,6 +178,17 @@ seu, sem reescrever o texto inteiro.
 compartilham o mesmo arquétipo); `person`/`hair`/`eyes`/`torso` descrevem o **indivíduo** e variam por variante.
 Por isso `species` só é aceita em `geracaoArt.base` — declará-la num bloco de gênero ou numa variante é erro de
 `.strict()`, com a chave nomeada.
+
+### `fixed` sobrescreve, só para uma espécie, um dos textos globais
+
+`fixed.style`/`view`/`pose`/`expression`/`negative` (`base.json`) valem por padrão para **todas** as espécies —
+é o que garante o mesmo enquadramento/pose/estilo de arte em todo o mod. Uma espécie cujo corpo não cabe nesse
+texto genérico (ex.: um robô sem boca, onde `fixed.expression` presume lábios: "lips fully closed...") declara
+`geracaoArt.base.fixed.<chave>` com o texto próprio. Mesma sintaxe de interpolação de um `template` de seção, e
+o mesmo comportamento de "nível mais específico vence" — texto **inteiro substituído**, nunca concatenado como
+`extra`. Só existe em `geracaoArt.base`, pela mesma regra de `species`: um traço fixo vale pra espécie inteira,
+não por gênero/variante. Chave ausente = usa o texto global de `base.json`, igual toda espécie que não declara
+`fixed`.
 
 ### Onde cada validação mora
 

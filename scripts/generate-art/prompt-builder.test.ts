@@ -178,6 +178,35 @@ describe('montarPrompts — seções e fragmentos vazios', () => {
   });
 });
 
+describe('montarPrompts — override de fixed', () => {
+  test('sem override, usa o texto fixo do base.json', () => {
+    const { positive, negative } = montar({});
+    expect(positive).toContain('ESTILO_FIXO');
+    expect(positive).toContain('EXPRESSAO_FIXA');
+    expect(negative).toContain('NEGATIVO_BASE');
+  });
+
+  test('com override em fixed, o texto da espécie substitui o do base.json inteiro, não concatena', () => {
+    const { positive } = montar({ fixed: { expression: 'SEM BOCA' } });
+    expect(positive).toContain('SEM BOCA');
+    expect(positive).not.toContain('EXPRESSAO_FIXA');
+  });
+
+  test('override em uma chave de fixed não afeta as outras', () => {
+    const { positive } = montar({ fixed: { expression: 'SEM BOCA' } });
+    expect(positive).toContain('ESTILO_FIXO');
+    expect(positive).toContain('POSE_FIXO');
+  });
+
+  test('override de fixed aceita a mesma sintaxe de interpolação de um template', () => {
+    const { positive } = montar({
+      person: { ethnicity: 'African' },
+      fixed: { expression: 'olhar de <person.ethnicity>' },
+    });
+    expect(positive).toContain('olhar de (African, dark skin:1.3)');
+  });
+});
+
 describe('montarPrompts — determinismo', () => {
   test('a mesma entrada produz sempre a mesma saída, byte a byte', () => {
     const campos = {
