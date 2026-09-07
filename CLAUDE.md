@@ -280,7 +280,10 @@ cortar uma release: `package.json` (`version`) e `mod/sagittarius-species/descri
 (`shields.io` lendo `package.json` direto do GitHub) — não precisa de edição manual, só reflete `package.json`
 depois do próximo push. O texto da listagem no Steam Workshop fica em `steam-workshop/description.md` e
 `steam-workshop/change-notes.md`; o `remote_file_id` do `descriptor.mod` é o ID do item no Steam Workshop usado
-para publicação.
+para publicação. `steam-workshop/description.pt.md` é uma tradução em português do `description.md`, mantida à
+mão — o `publish-workshop` não a lê nem a envia (`steamcmd`/VDF só suporta descrição single-language; ver
+"Publicação no Steam Workshop" abaixo), então atualizar o inglês não atualiza o português sozinho: uma mudança
+na listagem (nova espécie, contagem de retratos/espécies) pede editar os dois arquivos à mão.
 
 Versionamento segue semver de verdade, só adaptado a conteúdo em vez de software: uma espécie/portrait nova conta
 como **feature** e leva bump de **minor** (`1.14.0` → `1.15.0`), mesmo quando é só arte adicionada, sem mudança de
@@ -338,7 +341,9 @@ pipeline.
 **Limitações conhecidas, de propósito fora do escopo:** sem automação da galeria de screenshots do Workshop
 (`steam-workshop/pictures/screenshot__*.jpg` etc. — o `steamcmd`/VDF não expõe isso, só o painel web da Steam
 gerencia); sem localização de título/descrição por idioma (a API `ISteamUGC`/`SetItemUpdateLanguage` não é
-exposta pelo `steamcmd`, só a versão single-language via VDF); sem sync automático de versão entre
+exposta pelo `steamcmd`, só a versão single-language via VDF — é por isso que `steam-workshop/description.pt.md`
+existe só como cópia de leitura no repositório/GitHub, nunca publicada na Steam, e precisa ser atualizada à mão
+em paralelo ao `description.md`); sem sync automático de versão entre
 `package.json`/`descriptor.mod`/`README.md` (continua manual, ver "Metadados de release" acima); sem integração
 com o fluxo GitFlow/release.
 
